@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="<?= base_url('assets') ?>/style.css" />
   </head>
 
   <body>
@@ -21,17 +21,17 @@
                 any concerns you may have
               </p>
             </div>
-            <img class="group" src="img/group-31.png" />
+            <img class="group" src="<?= base_url('assets') ?>/images/group-31.png" />
           </div>
         </div>
-        <img class="OBJECTS" src="img/objects.png" />
+        <img class="OBJECTS" src="<?= base_url('assets') ?>/images/objects.png" />
         <div class="text-wrapper-2">Reporting Success</div>
         <div class="group-2">
           <div class="text-wrapper-3">View Report</div>
           <div class="overlap">
             <div class="text-wrapper-4">1</div>
             <div class="ellipse"></div>
-            <img class="line" src="img/line-3.svg" />
+            <img class="line" src="<?= base_url('assets') ?>/images/line-3.svg" />
           </div>
           <div class="text-wrapper-5">Fill The form</div>
           <div class="text-wrapper-6">Report Success</div>
@@ -42,7 +42,7 @@
           <div class="overlap-3">
             <div class="text-wrapper-8">3</div>
             <div class="ellipse-2"></div>
-            <img class="img" src="img/line-3.svg" />
+            <img class="img" src="<?= base_url('assets') ?>/images/line-3.svg" />
           </div>
         </div> 
         <header class="header">
@@ -58,8 +58,8 @@
               <div class="ellipse-4"></div>
             </div>
           </div>
-          <img class="line-2" src="img/line-1.svg" />
-          <img class="menu" src="img/menu.png" />
+          <img class="line-2" src="<?= base_url('assets') ?>/images/line-1.svg" />
+          <img class="menu" src="<?= base_url('assets') ?>/images/menu.png" />
         </header>
       </div>
     </div>

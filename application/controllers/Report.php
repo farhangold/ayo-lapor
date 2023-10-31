@@ -22,4 +22,13 @@ class Report extends CI_Controller {
 	{
 		$this->load->view('modul-report/reportsuccess');
 	}
+
+	public function reviewreport(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbardosen');
+		$this->load->view('modul-report/review-report');
+		$this->load->view('global/foot');
+
+
+	}
 }

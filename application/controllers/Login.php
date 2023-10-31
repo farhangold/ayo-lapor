@@ -21,5 +21,7 @@ class Login extends CI_Controller {
 	public function LoginPage()
 	{
 		$this->load->view('modul-login/login');
+		$this->load->view('global/foot');
+
 	}
 }

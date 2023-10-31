@@ -12,13 +12,13 @@
         }
     </style>
 
-    
+
 </head>
 <body>
     <div>
         <div class="row">
             <div class="col-md-7 justify-content-center" >
-            <div style="padding:150px;">
+            <div style="padding:100px;">
                  <div class="text-center">
                      <h1>Login to AyoLapor</h1><br>
                      <h2>Welcome to AyoLapor! Let's Report and Build a Better Future</h2><br>

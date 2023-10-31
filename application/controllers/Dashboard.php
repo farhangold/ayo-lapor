@@ -25,4 +25,12 @@ class Dashboard extends CI_Controller {
 		$this->load->view('modul-dasboard/Dasboard');
 		$this->load->view('global/foot');
 	}
+
+	public function DasboardDosen()
+	{
+		$this->load->view('global/head');
+		$this->load->view('global/navbardosen');
+		$this->load->view('modul-dasboard/dasboard-dosen');
+		$this->load->view('global/foot');
+	}
 }

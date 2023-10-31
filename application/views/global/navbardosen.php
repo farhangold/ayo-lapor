@@ -11,13 +11,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HOME &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="nav-link" href="<?= base_url('Dashboard/DasboardDosen') ?>">HOME &nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">ABOUT &nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">REVIEW REPORT &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('Report/reviewreport') ?>">REVIEW REPORT &nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">HISTORY REPORT</a>

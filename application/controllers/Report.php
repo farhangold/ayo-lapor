@@ -28,7 +28,5 @@ class Report extends CI_Controller {
 		$this->load->view('global/navbardosen');
 		$this->load->view('modul-report/review-report');
 		$this->load->view('global/foot');
-
-
 	}
 }

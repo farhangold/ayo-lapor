@@ -1,4 +1,4 @@
-<footer id="footer" class="text-white" style="background-color:black;padding:16px">
+<footer id="footer" class="text-white" style="background-color:black;padding:50px;margin-top:50px;">
       <div  class="text-center">
         <h1>CONTACT US</h1>
         <p >Contact us for assistance and support through 'AyoLapor' and 

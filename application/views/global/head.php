@@ -13,5 +13,36 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('assets/style.css') ?>" />
+    <style>
+        .navbar {
+            z-index: 1000; 
+        }
+        .content {
+            padding-top: 70px;
+        }
+        .square {
+            width: 1080px; /* Lebar garis persegi */
+            height: 500px; /* Tinggi garis persegi */
+            border: 2px solid red; /* Warna dan ketebalan garis tepi */
+            display: flex;
+            justify-content: center; /* Tengah horizontal */
+            align-items: center; /* Tengah vertikal */
+        }
+        .squareimage {
+        width: 1080px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('<?= base_url("assets") ?>/images/pana.png');
+        background-size: auto 90%; /* Set the width to auto, and height to 100% */
+        background-repeat: no-repeat; /* Prevent image from repeating */
+        background-position: center; 
+        }
+
+        .text {
+            color: black; /* Warna teks */
+        }
+    </style>
   </head>
   <body>

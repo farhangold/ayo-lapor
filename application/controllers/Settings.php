@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Report extends CI_Controller {
+class Settings extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,16 +18,11 @@ class Report extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
-	public function reportsuccess()
+	public function setting()
 	{
-		$this->load->view('modul-report/reportsuccess');
-	}
-
-	public function reviewreport(){
 		$this->load->view('global/head');
-		$this->load->view('global/navbardosen');
-		$this->load->view('modul-report/review-report');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-settings/settingPage');
 		$this->load->view('global/foot');
-
 	}
 }

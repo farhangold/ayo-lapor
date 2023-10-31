@@ -2,7 +2,8 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="<?= base_url('assets') ?>/style.css" />
+  <link rel="stylesheet" href="<?= base_url('assets') ?>/style.css" />
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   </head>
 
   <body>

@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black">
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;">
     <div class="container">
         <!-- Brand/logo -->
-        <a class="navbar-brand" href="#">Your Logo</a>
+        <a class="navbar-brand" href=""><img src="<?= base_url('assets') ?>/images/logo.png" alt=""></a>
 
         <!-- Toggle button for mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -11,16 +11,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#">HOME &nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About </a>
+                    <a class="nav-link" href="#">ABOUT &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">REVIEW REPORT &nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Review Report </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Report History</a>
+                    <a class="nav-link" href="#">HISTORY REPORT</a>
                 </li>
             </ul>
         </div>

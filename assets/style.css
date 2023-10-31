@@ -132,17 +132,23 @@
 }
 
 .report-berhasil .overlap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  width: 159px;
+  width: 64px;
   height: 64px;
   top: 0;
   left: 14px;
+  border-radius: 50%; /* Menggunakan 50% untuk membuatnya lingkaran */
+  border: 2px solid #e54b4b;
 }
 
 .report-berhasil .text-wrapper-4 {
   position: absolute;
-  top: 10px;
-  left: 22px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Membuat elemen berada di tengah-tengah */
   font-family: "Open Sans", Helvetica;
   font-weight: 400;
   color: #e54b4b;
@@ -152,21 +158,26 @@
 }
 
 .report-berhasil .ellipse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   width: 64px;
   height: 64px;
+  top: 0;
   left: 0;
   border-radius: 32px;
   border: 2px solid;
   border-color: #e54b4b;
-  position: absolute;
-  top: 0;
 }
 
 .report-berhasil .line {
+  display: flex;
+  align-items: center;
+  position: absolute;
   width: 96px;
   top: 30px;
   left: 63px;
-  position: absolute;
   height: 2px;
 }
 
@@ -195,18 +206,23 @@
 }
 
 .report-berhasil .overlap-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 64px;
   height: 64px;
   top: 0;
   left: 173px;
-  border-radius: 32px;
+  border-radius: 50%; /* Menggunakan 50% untuk membuatnya lingkaran */
+  border: 2px solid #e54b4b;
 }
 
 .report-berhasil .text-wrapper-7 {
-  left: 23px;
   position: absolute;
-  top: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Membuat elemen berada di tengah-tengah */
   font-family: "Open Sans", Helvetica;
   font-weight: 400;
   color: #e54b4b;
@@ -216,17 +232,23 @@
 }
 
 .report-berhasil .overlap-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  width: 159px;
+  width: 64px;
   height: 64px;
   top: 0;
   left: 237px;
+  border-radius: 50%; /* Menggunakan 50% untuk membuatnya lingkaran */
+  border: 2px solid #e54b4b;
 }
 
 .report-berhasil .text-wrapper-8 {
-  left: 118px;
   position: absolute;
-  top: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Membuat elemen berada di tengah-tengah */
   font-family: "Open Sans", Helvetica;
   font-weight: 400;
   color: #e54b4b;
@@ -278,7 +300,7 @@
   position: absolute;
   top: 0;
   font-family: "Open Sans", Helvetica;
-  color: var(--white);
+  color: #f5f5f5;
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
@@ -290,7 +312,7 @@
   position: absolute;
   top: 0;
   font-family: "Open Sans", Helvetica;
-  color: var(--white);
+  color: #f5f5f5;
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
@@ -303,7 +325,7 @@
   position: absolute;
   top: 0;
   font-family: "Open Sans", Helvetica;
-  color: var(--white);
+  color: #f5f5f5 ;
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
@@ -316,7 +338,7 @@
   left: 434px;
   font-family: "Open Sans", Helvetica;
   font-weight: 400;
-  color: var(--white);
+  color: #f5f5f5 ;
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
@@ -339,7 +361,7 @@
   width: 46px;
   height: 46px;
   left: 24px;
-  border-radius: 22.94px/23px;
+  border-radius: 50%; /* Menggunakan 50% untuk membuatnya lingkaran */
   border: 3px solid;
   border-color: var(--white);
   position: absolute;
@@ -350,7 +372,7 @@
   width: 46px;
   height: 46px;
   left: 0;
-  border-radius: 22.94px/23px;
+  border-radius: 50%; /* Menggunakan 50% untuk membuatnya lingkaran */
   border: 3px solid;
   border-color: #e54b4b;
   position: absolute;
@@ -359,8 +381,9 @@
 
 .report-berhasil .line-2 {
   width: 80px;
-  top: 62px;
-  left: 585px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Membuat elemen berada di tengah-tengah */
   position: absolute;
   height: 2px;
 }
@@ -372,3 +395,4 @@
   top: 23px;
   left: 1240px;
 }
+

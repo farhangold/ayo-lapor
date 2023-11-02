@@ -11,16 +11,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardDosen') ?>">HOME</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardKemahasiswaan') ?>">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="#">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reviewreport') ?>">REVIEW REPORT</a>
+                    <a class="nav-link" style="margin-left:30px;"href="">REVIEW REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/riwayatreportdosen') ?>">HISTORY REPORT</a>
+                    <a class="nav-link" style="margin-left:30px;"href="">HISTORY REPORT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>

@@ -11,19 +11,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('Dashboard/DasboardPage') ?>">HOME &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardPage') ?>">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('Report/reportmhs') ?>">REPORT &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reportmhs') ?>">REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="nav-link" style="margin-left:30px;"href="#">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">MY REPORT</a>
+                    <a class="nav-link" style="margin-left:30px;"href="#">MY REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('Settings/setting') ?>">SETTING</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>
                 </li>
             </ul>
         </div>

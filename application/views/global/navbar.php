@@ -9,21 +9,21 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
+            <ul class="navbar-nav mx-auto" style="">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HOME &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="nav-link" style="margin-left:50px;"href="#">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">REPORT &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="nav-link" style="margin-left:50px;"href="#">REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="nav-link" style="margin-left:50px;"href="#">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">MY REPORT</a>
+                    <a class="nav-link" style="margin-left:50px;"href="#">MY REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SETTING</a>
+                    <a class="nav-link" style="margin-left:50px;"href="#">SETTING</a>
                 </li>
             </ul>
         </div>

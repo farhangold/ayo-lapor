@@ -10,12 +10,12 @@
         <div class="col-md-3">
             <!-- Tambahkan gambar profil di sini -->
             <img src="<?= base_url('assets') ?>/images/user.png" alt="Profile Image" class="img-fluid">
-            <p><strong></strong> Usep Randana</p>
-            <p><strong></strong> 1303040598</p>
-            <p><strong></strong> Mahasiswa</p>
+            <p><strong></strong> Joko Anwar</p>
+            <p><strong></strong> JAW</p>
+            <p><strong></strong> Dosen Wali</p>
         </div>
         <div class="col-md-9">
-            <h1>Profile Mahasiswa</h1><hr>
+            <h1>Profile Dosen Wali</h1><hr>
             <p><strong>Nama Depan:</strong> <?php echo $profile['first_name']; ?></p>
             <p><strong>Nama Belakang:</strong> <?php echo $profile['last_name']; ?></p>
             <p><strong>Alamat Email:</strong> <?php echo $profile['email']; ?></p>

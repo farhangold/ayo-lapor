@@ -43,11 +43,18 @@ class Report extends CI_Controller {
 		$this->load->view('modul-report/riwayat-report-dosen');
 		$this->load->view('global/foot');
 	}
+<<<<<<< HEAD
 
 	public function reportmhs(){
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/report-mhs');
+=======
+	public function myreport(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbardosen');
+		$this->load->view('modul-report/myreport');
+>>>>>>> c318c0c53222dc796d370fc23a8057a135b469c4
 		$this->load->view('global/foot');
 	}
 }

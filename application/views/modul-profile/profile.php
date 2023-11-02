@@ -15,7 +15,7 @@
             <p><strong></strong> Goldlaner</p>
         </div>
         <div class="col-md-9">
-            <h1>Profil</h1>
+            <h1>Profil Mahasiswa</h1><hr>
             <p><strong>Nama Depan:</strong> <?php echo $profile['first_name']; ?></p>
             <p><strong>Nama Belakang:</strong> <?php echo $profile['last_name']; ?></p>
             <p><strong>Alamat Email:</strong> <?php echo $profile['email']; ?></p>

@@ -13,7 +13,7 @@
             <li class="list-group-item"><a href="<?= site_url('settings/quick_record') ?>">Rekam Cepat</a></li>
             <li class="list-group-item"><a href="<?= site_url('settings/dark_mode') ?>">Mode Gelap</a></li>
             <li class="list-group-item"><a href="<?= site_url('settings/contact_us') ?>">Hubungi Kami</a></li>
-            <li class="list-group-item"><a href="<?= site_url('logout') ?>">Logout</a></li>
+            <li class="list-group-item"><a href="<?= base_url('settings/logout') ?>">Logout</a></li>
         </ul>
     </div>
 </body>

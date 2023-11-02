@@ -22,6 +22,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('Report/riwayatreportdosen') ?>">HISTORY REPORT</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('Settings/setting') ?>">SETTING</a>
+                </li>
             </ul>
         </div>
     </div>

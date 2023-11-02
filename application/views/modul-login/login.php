@@ -24,18 +24,17 @@
                     <form class="user">
                         <div class="form-group row">
                             <label for="userType"></label>
-                            <select select class="form-control" id="userType">
-                                <option value="Selected">Pilih Role Anda!</option>
+                            <select class="form-control" id="userType">
                                 <option value="Mahasiswa">Mahasiswa</option>
                                 <option value="Dosen Wali">Dosen Wali</option>
                                 <option value="Kemahasiswaan">Kemahasiswaan</option>
                             </select>
                         </div>
                         <div class="form-group row">
-                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Email SSO Anda">
+                            <input type="text" class="form-control form-control-user" id="username" aria-describedby="emailHelp" placeholder="Masukkan Username SSO Anda">
                         </div>
                         <div class="form-group row">
-                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                            <input type="password" class="form-control form-control-user" id="password" placeholder="Password">
                         </div>
                         <div class="form-group row">
                             <div class="col-6 custom-control custom-checkbox small text-left">
@@ -62,19 +61,44 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
-        function submit() {
-            var userType = $("#userType").val()
-            console.log(userType)
-            if (userType === "Mahasiswa") {
-                window.location.href = "<?= base_url('Dashboard/DasboardPage') ?>"; 
-            }else if (userType === "Dosen Wali") {
-                window.location.href = "<?= base_url('Dashboard/DasboardDosen') ?>"; 
-            }else if (userType === "Kemahasiswaan") {
-                window.location.href = "<?= base_url('Dashboard/DasboardKemahasiswaan') ?>"; 
-            }
+    var j = jQuery.noConflict();
+    
+    function submit() {
+        var datapost = {
+            role: $("#userType").val(),
+            username: $("#username").val(),
+            password: $("#password").val()
         }
-    </script>
+        
+        j.ajax({
+            url: "<?= base_url('login/check_login') ?>",
+            method: "POST",
+            data: datapost,
+            success: function (d) {
+                var data = JSON.parse(d);
+                if (data.status == false) {
+                    alert(data.message)
+                }else{
+                    // alert(data.message)
+                    var userType = $("#userType").val()
+                    console.log(userType)
+                    if (userType === "Mahasiswa") {
+                        window.location.href = "<?= base_url('Dashboard/DasboardPage') ?>"; 
+                    }else if (userType === "Dosen Wali") {
+                        window.location.href = "<?= base_url('Dashboard/DasboardDosen') ?>"; 
+                    }else if (userType === "Kemahasiswaan") {
+                        window.location.href = "<?= base_url('Dashboard/DasboardKemahasiswaan') ?>"; 
+                    }
+                }
+            }
+        });
+
+        // Rest of your code
+    }
+</script>
+
 </body>
 </html>

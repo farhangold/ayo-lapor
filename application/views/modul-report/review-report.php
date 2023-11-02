@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
 
             <div class="col-lg-10">
-                <table id="datatable" class="table table-bordered table-hover  text-center">
+                <table id="myTable" class="table table-bordered table-hover  text-center">
                     <thead class="bg-danger text-white">
                         <tr>
                         <th scope="col">NO</th>

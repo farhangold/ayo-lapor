@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HOME &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="nav-link" href="<?= base_url('Dashboard/DasboardPage') ?>">HOME &nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">REPORT &nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -23,7 +23,7 @@
                     <a class="nav-link" href="#">MY REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SETTING</a>
+                    <a class="nav-link" href="<?= base_url('Settings/setting') ?>">SETTING</a>
                 </li>
             </ul>
         </div>

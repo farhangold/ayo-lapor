@@ -20,7 +20,7 @@
                     <a class="nav-link" href="<?= base_url('Report/reviewreport') ?>">REVIEW REPORT &nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HISTORY REPORT</a>
+                    <a class="nav-link" href="<?= base_url('Report/riwayatreportdosen') ?>">HISTORY REPORT</a>
                 </li>
             </ul>
         </div>

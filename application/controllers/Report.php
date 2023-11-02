@@ -29,4 +29,18 @@ class Report extends CI_Controller {
 		$this->load->view('modul-report/review-report');
 		$this->load->view('global/foot');
 	}
+
+	public function riwayatreportdosen(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbardosen');
+		$this->load->view('modul-report/riwayat-report-dosen');
+		$this->load->view('global/foot');
+	}
+
+	public function detailreportdosen(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbardosen');
+		$this->load->view('modul-report/riwayat-report-dosen');
+		$this->load->view('global/foot');
+	}
 }

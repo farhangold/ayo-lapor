@@ -47,7 +47,6 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <!-- Add an ID to the login button -->
                             <a id="loginButton"onclick="submit()" class="btn btn-danger btn-user btn-block">
                                 Login
                             </a>
@@ -72,6 +71,8 @@
                 window.location.href = "<?= base_url('Dashboard/DasboardPage') ?>"; 
             }else if (userType === "Dosen Wali") {
                 window.location.href = "<?= base_url('Dashboard/DasboardDosen') ?>"; 
+            }else if (userType === "Kemahasiswaan") {
+                window.location.href = "<?= base_url('Dashboard/DasboardKemahasiswaan') ?>"; 
             }
         }
     </script>

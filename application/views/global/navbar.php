@@ -22,8 +22,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">MY REPORT</a>
                 </li>
+<<<<<<< HEAD
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('Settings/setting') ?>">SETTING</a>
+=======
+            </ul>
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                    <a class="navbar-brand" href=""><img src="<?= base_url('assets') ?>/images/settings.png" alt=""></a>
+>>>>>>> 44ad0946a7c48aece11d329317fc228da7d75924
                 </li>
             </ul>
         </div>

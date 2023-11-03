@@ -24,6 +24,7 @@ class Dashboard extends CI_Controller {
 			redirect(base_url('login/LoginPage'));
 		}
 	}
+	
 	public function DasboardPage()
 	{
 		$this->load->view('global/head');

@@ -35,7 +35,7 @@
                             <input type="file" class="form-control-file" id="fileUpload" name="fileUpload">
                         </div>
                         <div class="form-group row">
-                            <input type="email" class="form-control form-control-user" id="keterangan" aria-describedby="keterangan" placeholder="Masukan Keterangan">
+                            <input type="text" class="form-control form-control-user" id="keterangan" aria-describedby="keterangan" placeholder="Masukan Keterangan">
                         </div>
                         <div class="form-group row">
                             <a id="SaveButton"onclick="savedraft()" class="btn btn-primary text-white btn-user btn-block">
@@ -61,12 +61,29 @@
 
     <script>
         function submit() {
+            var userType = $("#userType").val();
+            var keterangan = $("#keterangan").val();
+            var fileUpload = $("#fileUpload").val();
+
+            if (userType === "Pelecehan" || userType === "Kekerasan" && keterangan !== "" && fileUpload !== "") {
+                alert("Reporting Success");
+            } else if(userType === "Pelecehan"||userType === "Kekerasan" && keterangan == "" && fileUpload !== "") {
+                alert("Masukan Keterangan");
+            }else if(userType === "Pelecehan"||userType === "Kekerasan" && keterangan !== "" && fileUpload == ""){
+                alert("Masukan Bukti");
+            }else if(userType === "Pelecehan"||userType === "Kekerasan" && keterangan == "" && fileUpload == ""){
+                alert("Masukan Bukti dan Keterangan");
+            }
+        }
+
+
+        function savedraft() {
             var userType = $("#userType").val()
             console.log(userType)
             if (userType === "Pelecehan") {
-                alert("Reporting Success"); 
+                alert("The report is saved in draft"); 
             }else if (userType === "Kekerasan") {
-                alert("Reporting Sucess");
+                alert("The report is saved in draft");
             }
         }
     </script>

@@ -7,7 +7,7 @@
 
             <div class="col-lg-10">
                 <table id="datatable" class="table table-bordered table-hover  text-center">
-                    <thead class="bg-danger text-white">
+                    <thead class="thead-dark text-white">
                         <tr>
                         <th scope="col">NO</th>
                         <th scope="col">Name</th>

@@ -13,9 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardDosen') ?>">HOME</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="#">ABOUT</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reviewreport') ?>">REVIEW REPORT</a>
                 </li>
@@ -23,7 +23,7 @@
                     <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/riwayatreportdosen') ?>">HISTORY REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/settingdsn') ?>">SETTING</a>
                 </li>
             </ul>
         </div>

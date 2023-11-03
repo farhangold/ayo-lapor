@@ -41,9 +41,9 @@ class Login extends CI_Controller {
 
 	function regisUser() {
 		$data = [
-			'username' => 'ghazagym',
+			'username' => 'admin',
 			'password' => password_hash("password",PASSWORD_DEFAULT),
-			'role'=> "Mahasiswa"
+			'role'=> "Kemahasiswaan"
 		];
 		$this->db->insert('users',$data);
 	}

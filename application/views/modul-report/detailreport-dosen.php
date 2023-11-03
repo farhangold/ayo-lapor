@@ -23,14 +23,26 @@
         </div>
         <div class="col-lg-7">
             <div class="mb-3">
-                <button type="submit" class="btn btn-dark text-white btn-block">Hubungi Mahasiswa</button>
+                <button type="button" class="btn btn-dark text-white btn-block" id="hubungiButton">Hubungi Mahasiswa</button>
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn btn-danger text-white btn-block">Tolak Laporan</button>
+                <button type="button" class="btn btn-danger text-white btn-block" id="tolakButton">Tolak Laporan</button>
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn btn-success text-white btn-block">Tindak Lanjut</button>
+                <button type="button" class="btn btn-success text-white btn-block" id="tindakLanjutButton">Tindak Lanjut</button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+
+        document.getElementById('tolakButton').addEventListener('click', function() {
+            alert('Laporan Ditolak');
+        });
+
+        document.getElementById('tindakLanjutButton').addEventListener('click', function() {
+            alert('Laporan Ditindak Lanjuti');
+        });
+    </script>
+

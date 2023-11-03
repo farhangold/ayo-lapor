@@ -13,17 +13,20 @@
                 <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardKemahasiswaan') ?>">HOME</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="#">ABOUT</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-left:30px;"href="">REVIEW REPORT</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reviewreportkemahasiswaan') ?>">REVIEW REPORT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="">HISTORY REPORT</a>
                 </li>
+                <li class="nav-item ">
+                    <a class="nav-link" style="margin-left:30px;"href="">NEWS</a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/settingkmh') ?>">SETTING</a>
                 </li>
             </ul>
         </div>

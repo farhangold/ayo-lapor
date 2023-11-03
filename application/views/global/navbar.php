@@ -17,10 +17,10 @@
                     <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reportmhs') ?>">REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-left:30px;"href="#">ABOUT</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/myreport') ?>">MY REPORT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="margin-left:30px;"href="#">MY REPORT</a>
+                    <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Berita/Beritapage') ?>">NEWS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>

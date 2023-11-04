@@ -18,6 +18,13 @@ class Dashboard extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+	public function __construct() {
+		parent::__construct();
+		if($this->session->userdata('username') == null){
+			redirect(base_url('login/LoginPage'));
+		}
+	}
+	
 	public function DasboardPage()
 	{
 		$this->load->view('global/head');
@@ -31,6 +38,13 @@ class Dashboard extends CI_Controller {
 		$this->load->view('global/head');
 		$this->load->view('global/navbardosen');
 		$this->load->view('modul-dasboard/dasboard-dosen');
+		$this->load->view('global/foot');
+	}
+	public function DasboardKemahasiswaan()
+	{
+		$this->load->view('global/head');
+		$this->load->view('global/navbarkmhs');
+		$this->load->view('modul-dasboard/dasboard-kmhs');
 		$this->load->view('global/foot');
 	}
 }

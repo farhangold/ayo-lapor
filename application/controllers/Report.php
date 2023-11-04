@@ -18,6 +18,12 @@ class Report extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+	public function __construct() {
+		parent::__construct();
+		if($this->session->userdata('username') == null){
+			redirect(base_url('login/LoginPage'));
+		}
+	}
 	public function reportsuccess()
 	{
 		$this->load->view('modul-report/reportsuccess');
@@ -27,6 +33,41 @@ class Report extends CI_Controller {
 		$this->load->view('global/head');
 		$this->load->view('global/navbardosen');
 		$this->load->view('modul-report/review-report');
+		$this->load->view('global/foot');
+	}
+
+	public function reviewreportkemahasiswaan(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbarkmhs');
+		$this->load->view('modul-report/review-report-kmhs');
+		$this->load->view('global/foot');
+	}
+
+	public function riwayatreportdosen(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbardosen');
+		$this->load->view('modul-report/riwayat-report-dosen');
+		$this->load->view('global/foot');
+	}
+
+	public function detailreportdosen(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbardosen');
+		$this->load->view('modul-report/detailreport-dosen');
+		$this->load->view('global/foot');
+	}
+
+	public function reportmhs(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-report/report-mhs');
+		$this->load->view('global/foot');
+	}
+
+	public function myreport(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-report/myreport');
 		$this->load->view('global/foot');
 	}
 }

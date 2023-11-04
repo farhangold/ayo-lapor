@@ -11,10 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.6/css/jquery.dataTables.min.css">
+
+    <!-- Tautan untuk DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <!-- Tautan Bootstrap CSS versi 4.5.2 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Tautan Bootstrap CSS yang tidak relevan (versi 4.0.0) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Tautan ke berkas style.css di direktori assets -->
     <link rel="stylesheet" href="<?= base_url('assets/style.css') ?>" />
+<<<<<<< HEAD
+=======
+    <!-- Tautan Bootstrap CSS (versi 5.3.0) -->
+>>>>>>> 2f4f441e7b578dbe1371fbbd58f5e0046609cfa2
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
     <style>

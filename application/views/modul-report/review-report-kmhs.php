@@ -21,14 +21,14 @@
                         <th scope="row">1</th>
                         <td>Farhan</td>
                         <td>-</td>
-                        <td>Menunggu Tindak Lanjut Dosen Wali</td>
+                        <td>Menunggu Tindak Lanjut Kemahasiswaan</td>
                         <td><button class="detail-button btn btn-info">Detail</button></td>
                         </tr>
                         <tr>
                         <th scope="row">2</th>
                         <td>Tangguh</td>
                         <td>-</td>
-                        <td>Dalam Tindak Lanjut Dosen Wali</td>
+                        <td>Dalam Tindak Lanjut Kemahasiswaan</td>
                         <td><button class="detail-button btn btn-info">Detail</button></td>
                         </tr>
                     </tbody>

@@ -37,5 +37,20 @@ class Profile extends CI_Controller {
         $this->load->view('modul-profile/profile_Dosen', $data); // Melewatkan data profil ke view
         $this->load->view('global/foot');
     }
+    public function ProfilepageKmh()
+    {
+        // Data profil
+        $data['profile'] = array(
+            'first_name' => 'Ahmad',
+            'last_name' => 'Suryadi',
+            'email' => 'ahmadSur@example.com',
+            'description' => 'Saya Kepala Kemahsiswaan Telkom!'
+        );
+
+        $this->load->view('global/head');
+        $this->load->view('global/navbar');
+        $this->load->view('modul-profile/profile_Kmh', $data); // Melewatkan data profil ke view
+        $this->load->view('global/foot');
+    }
 }
 ?>

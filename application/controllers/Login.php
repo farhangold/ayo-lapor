@@ -19,11 +19,7 @@ class Login extends CI_Controller {
 
 	function regisUser() {
 		$data = [
-<<<<<<< HEAD
 			'username' => 'andi',
-=======
-			'username' => 'yesa',
->>>>>>> f01d404adb4059841695e5ab2a838a06170e746b
 			'password' => password_hash("password",PASSWORD_DEFAULT),
 			'role'=> "Kemahasiswaan"
 		];

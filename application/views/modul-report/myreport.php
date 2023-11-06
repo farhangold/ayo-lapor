@@ -1,146 +1,111 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>My Report</title>
-<style>
-	body, p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    }
-    .btn.button.border-danger:active {
-        background-color: #E54B4B; 
-        color: white; 
-    }
 
-    .centered-container {
-        text-align: center;
-        margin-top: 20px; 
-        font-size: 20px;
-    }
-    .border-container {
-        border-style: ridge;
-        max-width: 1080px;
-        margin: 1% auto;
-        text-align: left;
-        font-weight: bold;
-        font-size: 20px;
-        padding-left: 80px;
-        position: relative;
-    }
-    .name {
-        margin: 0;
-    }
-    .date {
-        color: #B9B7BD;
-        font-size: 12px;
-        margin: 0;
-    }
-    .date-box {
-        margin-top: 10px;
-        padding-top: 5px;
-    }
-    .waiting-box {
-        border: 1px solid #F8F9FA; 
-        border-radius: 4px; 
-        padding: 5px 10px; 
-        display: inline-block; 
-        font-size: 15px;
-        width: 335px;
-        height: 45px;
-        top: 525px;
-        left: 224px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    .ellipsis-icon {
-        position: absolute;
-        top: 10px;
-        right: 100px; /* Ubah posisi ikon ellipsis */
-        color: #E54B4B;
-        font-size: 70px;
-    }
-    .entity-container {
-        margin-top: 20px; 
-    }
-    .button {
-        color: #E54B4B;
-        padding: 5px 33px;
-        margin: 8px;
-        font-size: 25px;
-    }
-</style>
-</head>
-<body style="text-align: center;">
     <div class="container">
-        <div class="centered-container">
-            <button class="btn btn-light button border-danger">Waiting Confirmation</button>
-            <button style="color: white;" class="btn btn-danger button">Report Success</button>
-            <button class="btn btn-light button border-danger">Report Rejected</button>
-            <button class="btn btn-light button border-danger">Draft Report</button>
-            <hr class="my-4">
-        </div>
-        <div class="border-container mb-3">
-            <p class="name">Lord Tangguh</p>
-            <p class="date">20 Mei 2023</p>
-            <div class="date-box">
-                <div class="waiting-box border shadow p-3 mb-5 bg-body rounded text-danger">Menunggu Tindak Lanjut Kemahasiswaan</div>
-            </div>
-            <div class="ellipsis-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                </svg>
-            </div>
-        </div>
-        <div class="border-container">
-            <p class="name">Lord Kepin</p>
-            <p class="date">20 Mei 2023</p>
-            <div class="date-box">
-                <div class="waiting-box border shadow p-3 mb-5 bg-body rounded text-danger">Menunggu Tindak Lanjut Dosen</div>
-            </div>
-            <div class="ellipsis-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                </svg>
-            </div>
-        </div>
-        <div class="border-container">
-            <p class="name">Lord Farhan</p>
-            <p class="date">20 Mei 2023</p>
-            <div class="date-box">
-                <div class="waiting-box border shadow p-3 mb-5 bg-body rounded text-success">Sudah Ditindak Lanjuti Oleh Dosen Wali</div>
-            </div>
-            <div class="ellipsis-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                </svg>
-            </div>
-        </div>
-        <div class="border-container">
-            <p class="name">Lord Ghaza</p>
-            <p class="date">20 Mei 2023</p>
-            <div class="date-box">
-                <div class="waiting-box border shadow p-3 mb-5 bg-body rounded text-warning">Save As Draft</div>
-            </div>
-            <div class="ellipsis-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                </svg>
-            </div>
-        </div>
-        <div class="border-container">
-            <p class="name">Lord Fathur</p>
-            <p class="date">20 Mei 2023</p>
-            <div class="date-box">
-                <div class="waiting-box border shadow p-3 mb-5 bg-body rounded text-success">Selesai</div>
-            </div>
-            <div class="ellipsis-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                </svg>
+        <br><br>
+        <br><br>
+        <h2 class="text-center text-DARK">MY REPORT</h2>
+        <br><br>
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10">
+                <table id="myTable" class="table table-bordered table-hover  ">
+                    <thead class="text-center" >
+                        <tr>
+                        <th style="background-color:red;" class="text-white text-center" scope="col">NO</th>
+                        <th style="background-color:red;" class="text-white text-center" scope="col">Name</th>
+                        <th style="background-color:red;" class="text-white text-center" scope="col">Date</th>
+                        <th style="background-color:red;" class="text-white text-center" scope="col">Status</th>
+                        <th style="background-color:red;" class="text-white text-center w-25" scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>Farhan</td>
+                        <td>-</td>
+                        <td>Draft</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button> &nbsp;<button class="detail-button btn btn-warning text-white ">Edit</button> &nbsp;<button class="detail-button btn btn-danger text-white ">Delete</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Tangguh</td>
+                        <td>-</td>
+                        <td>Success</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                        <td>Farhan</td>
+                        <td>-</td>
+                        <td>Draft</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button> &nbsp;<button class="detail-button btn btn-warning text-white ">Edit</button> &nbsp;<button class="detail-button btn btn-danger text-white ">Delete</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">4</th>
+                        <td>Tangguh</td>
+                        <td>-</td>
+                        <td>Success</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">5</th>
+                        <td>Farhan</td>
+                        <td>-</td>
+                        <td>Draft</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button> &nbsp;<button class="detail-button btn btn-warning text-white ">Edit</button> &nbsp;<button class="detail-button btn btn-danger text-white ">Delete</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">6</th>
+                        <td>Tangguh</td>
+                        <td>-</td>
+                        <td>Success</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">7</th>
+                        <td>Farhan</td>
+                        <td>-</td>
+                        <td>Draft</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button> &nbsp;<button class="detail-button btn btn-warning text-white ">Edit</button> &nbsp;<button class="detail-button btn btn-danger text-white ">Delete</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">8</th>
+                        <td>Tangguh</td>
+                        <td>-</td>
+                        <td>Success</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">9</th>
+                        <td>Farhan</td>
+                        <td>-</td>
+                        <td>Draft</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button> &nbsp;<button class="detail-button btn btn-warning text-white ">Edit</button> &nbsp;<button class="detail-button btn btn-danger text-white ">Delete</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">10</th>
+                        <td>Tangguh</td>
+                        <td>-</td>
+                        <td>Success</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">11</th>
+                        <td>Farhan</td>
+                        <td>-</td>
+                        <td>Draft</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button> &nbsp;<button class="detail-button btn btn-warning text-white ">Edit</button></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">12</th>
+                        <td>Tangguh</td>
+                        <td>-</td>
+                        <td>Success</td>
+                        <td><button class="detail-button btn btn-info text-white ">Detail</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-</body>
-</html>
+    
+

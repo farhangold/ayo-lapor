@@ -12,14 +12,13 @@
       rel="stylesheet"
     />
 
-    <!-- Tautan untuk DataTables CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
     <!-- Tautan Bootstrap CSS versi 4.5.2 -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <!-- Tautan Bootstrap CSS yang tidak relevan (versi 4.0.0) -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <!-- Tautan Bootstrap CSS (versi 5.3.0) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <!-- Tautan ke berkas style.css di direktori assets -->
     <link rel="stylesheet" href="<?= base_url('assets/style.css') ?>" />
 
@@ -31,6 +30,7 @@
       .content {
           padding-top: 70px;
       }
+      
       .square {
         max-width: 100%; /* Ensure the square doesn't exceed the container width */
         height: auto; /* Allow the height to adjust proportionally */

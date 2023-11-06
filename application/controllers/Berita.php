@@ -25,4 +25,12 @@ class Berita extends CI_Controller {
 		$this->load->view('modul-berita/berita');
 		$this->load->view('global/foot');
 	}
+
+	public function BeritaKmhs()
+	{
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-berita/berita-kmhs');
+		$this->load->view('global/foot');
+	}
 }

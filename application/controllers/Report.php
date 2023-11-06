@@ -31,29 +31,36 @@ class Report extends CI_Controller {
 
 	public function reviewreport(){
 		$this->load->view('global/head');
-		$this->load->view('global/navbardosen');
+		$this->load->view('global/navbar');
 		$this->load->view('modul-report/review-report');
 		$this->load->view('global/foot');
 	}
 
 	public function reviewreportkemahasiswaan(){
 		$this->load->view('global/head');
-		$this->load->view('global/navbarkmhs');
+		$this->load->view('global/navbar');
 		$this->load->view('modul-report/review-report-kmhs');
 		$this->load->view('global/foot');
 	}
 
 	public function riwayatreportdosen(){
 		$this->load->view('global/head');
-		$this->load->view('global/navbardosen');
+		$this->load->view('global/navbar');
 		$this->load->view('modul-report/riwayat-report-dosen');
 		$this->load->view('global/foot');
 	}
 
 	public function detailreportdosen(){
 		$this->load->view('global/head');
-		$this->load->view('global/navbardosen');
+		$this->load->view('global/navbar');
 		$this->load->view('modul-report/detailreport-dosen');
+		$this->load->view('global/foot');
+	}
+
+	public function detailreport(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-report/detailreport');
 		$this->load->view('global/foot');
 	}
 
@@ -68,6 +75,13 @@ class Report extends CI_Controller {
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/myreport');
+		$this->load->view('global/foot');
+	}
+
+	public function riwayatreportkmhs(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-report/riwayat-report-kmhs');
 		$this->load->view('global/foot');
 	}
 }

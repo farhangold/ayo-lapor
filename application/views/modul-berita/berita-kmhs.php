@@ -1,6 +1,7 @@
 
     <div id="component" class="container-fluid py-3">
-        <p class="text-black fs-1 fw-bold font-family-Alegreya SC" style="margin-left: 110px; margin-top: 95px;">News and Information</p>
+        
+        <p class="text-black fs-1 fw-bold font-family-Alegreya SC" style="margin-left: 110px; margin-top: 95px;">News and Information &nbsp;</p>
     </div>
     <div id="component" class="container-fluid py-3">
         <p class="text-start text-black fs-2 fw-semibold font-family-Open Sans" style="margin-left: 110px;">"5 Signs You're Being Harassed"</p>
@@ -51,5 +52,6 @@
                 Reporting harassment is an important step, but it can sometimes lead to retaliation from the harasser or even your superiors. If you experience adverse consequences for reporting harassment, keep a record of these incidents and reach out to a higher authority or an external organization if necessary.
             </span>
         </p>
+        <p><button class="detail-button btn btn-warning text-white w-25 ">Edit News</button></p>
     </div>
 

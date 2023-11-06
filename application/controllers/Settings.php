@@ -32,23 +32,16 @@ class Settings extends CI_Controller {
 		$this->load->view('global/foot');
 	}
 
-	public function settingdsn()
-	{
-		$this->load->view('global/head');
-		$this->load->view('global/navbardosen');
-		$this->load->view('modul-settings/settingdsn');
-		$this->load->view('global/foot');
-	}
-
-	public function settingkmh()
-	{
-		$this->load->view('global/head');
-		$this->load->view('global/navbarkmhs');
-		$this->load->view('modul-settings/settingkmh');
-		$this->load->view('global/foot');
-	}
 	function logout(){
 		$this->session->unset_userdata('username');
 		redirect(base_url('login/LoginPage'));
+	}
+
+	public function faq()
+	{
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-settings/faq');
+		$this->load->view('global/foot');
 	}
 }

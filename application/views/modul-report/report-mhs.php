@@ -25,17 +25,17 @@
                         <div class="form-group row">
                             <label for="userType"></label>
                             <select select class="form-control" id="userType">
-                                <option value="Selected">Jenis Laporan</option>
-                                <option value="Pelecehan">Pelecehan</option>
-                                <option value="Kekerasan">Kekerasan</option>
+                                <option value="Selected">Type Report</option>
+                                <option value="Pelecehan">Fractions</option>
+                                <option value="Kekerasan">Violence</option>
                             </select>
                         </div>
                         <div class="form-group row">
-                            <label for="fileUpload">Unggah Bukti</label>
+                            <label for="fileUpload">Upload of Proof</label>
                             <input type="file" class="form-control-file" id="fileUpload" name="fileUpload">
                         </div>
                         <div class="form-group row">
-                            <input type="text" class="form-control form-control-user" id="keterangan" aria-describedby="keterangan" placeholder="Masukan Keterangan">
+                            <input type="text" class="form-control form-control-user" id="keterangan" aria-describedby="keterangan" placeholder="Description">
                         </div>
                         <div class="form-group row">
                             <a id="SaveButton"onclick="savedraft()" class="btn btn-primary text-white btn-user btn-block">

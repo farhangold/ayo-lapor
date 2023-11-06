@@ -18,7 +18,7 @@
             <div class="col-md-7 justify-content-center">
                 <div style="padding:100px;">
                     <div class="text-center">
-                        <h1>Login to AyoLapor</h1><br>
+                        <h1>Login to AyoLapor </h1><br>
                         <h2>Welcome to AyoLapor! Let's Report and Build a Better Future</h2><br>
                     </div>
                     <form class="user">
@@ -84,15 +84,7 @@
                     alert(data.message)
                 }else{
                     // alert(data.message)
-                    var userType = $("#userType").val()
-                    console.log(userType)
-                    if (userType === "Mahasiswa") {
-                        window.location.href = "<?= base_url('Dashboard/DasboardPage') ?>"; 
-                    }else if (userType === "Dosen Wali") {
-                        window.location.href = "<?= base_url('Dashboard/DasboardDosen') ?>"; 
-                    }else if (userType === "Kemahasiswaan") {
-                        window.location.href = "<?= base_url('Dashboard/DasboardKemahasiswaan') ?>"; 
-                    }
+                     window.location.href = "<?= base_url('Dashboard/DasboardPage') ?>"; 
                 }
             }
         });

@@ -1,3 +1,6 @@
+<?php
+$user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
+?>
 <div class="content">
     <img src="<?= base_url('assets') ?>/images/ayolapor.png" class="rounded mx-auto d-block img-thumbnail" 
     alt="Responsive image" style="width: 50%; height: 50%;">
@@ -26,6 +29,7 @@
   </div>
 </div>
 
+<?php if (strtolower($user->role) == "mahasiswa") { ?>
 <div class="container">
     <div class="row">
         <div>
@@ -46,7 +50,7 @@
         </div>
     </div>
 </div>
-
+<?php } ?>
 <div class="container">
     <div class="text-left;" style="margin-top: 50px;">
         <h4 style="margin-left:50px; font-family: alegreya SC;" ;">NEWS AND INFOMATION</h4>

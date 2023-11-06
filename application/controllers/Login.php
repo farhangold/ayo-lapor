@@ -7,14 +7,7 @@ class Login extends CI_Controller {
 		parent::__construct();
 		if($this->session->userdata('username')){
 			$data = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
-			$myurl = "";
-			if ($data->role === "Mahasiswa") {
-				$myurl = base_url('Dashboard/DasboardPage'); 
-			}else if ($data->role === "Dosen Wali") {
-				$myurl = base_url('Dashboard/DasboardDosen'); 
-			}else if ($data->role === "Kemahasiswaan") {
-				$myurl = base_url('Dashboard/DasboardKemahasiswaan'); 
-			}
+			$myurl = base_url('Dashboard/DasboardPage'); 
 			redirect($myurl);
 		}
 	}
@@ -26,9 +19,9 @@ class Login extends CI_Controller {
 
 	function regisUser() {
 		$data = [
-			'username' => 'ghazagym',
+			'username' => 'andi',
 			'password' => password_hash("password",PASSWORD_DEFAULT),
-			'role'=> "Mahasiswa"
+			'role'=> "Kemahasiswaan"
 		];
 		$this->db->insert('users',$data);
 	}

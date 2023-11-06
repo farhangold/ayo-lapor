@@ -40,7 +40,7 @@
                     <div style="font-family: alegreya SC; text-align: justify;">
                         Don't be afraid to report; we are here to assist you. Recognizing the signs of sexual violence is the first step towards ensuring safety for all. If you observe any symptoms or incidents, it's crucial to speak up and report them promptly. Our support team is dedicated to helping you through this process.
                     </div>
-                    <button class="btn btn-danger text-white" style="margin-top: 20px;">SEND A REPORT</button>
+                    <a href="<?= base_url('Report/reportmhs') ?>" class="btn btn-danger text-white" style="margin-top: 20px;">SEND A REPORT</a>
                 </div>
             </div>
         </div>
@@ -79,12 +79,16 @@
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+            </span>
+            <span class="sr-only"></span>
           </a>
           <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span aria-hidden="true" style="";>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+            </span>
+            <span class="sr-only" style="color:black;"></span>
           </a>
         </div>
     </div>

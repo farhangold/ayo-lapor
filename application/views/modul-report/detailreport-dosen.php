@@ -1,8 +1,6 @@
 
-<div class="container">
-    <br><br><br><br><br>
+<div class="container mb-5"style="margin-top: 6rem;">
     <h2 class="text-center text-DARK">DETAIL REPORT</h2>
-    <br><br>
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <form>
@@ -37,13 +35,12 @@
 </div>
 
 <script>
+    document.getElementById('tolakButton').addEventListener('click', function() {
+        alert('Laporan Ditolak');
+    });
 
-        document.getElementById('tolakButton').addEventListener('click', function() {
-            alert('Laporan Ditolak');
-        });
-
-        document.getElementById('tindakLanjutButton').addEventListener('click', function() {
-            alert('Laporan Ditindak Lanjuti');
-        });
-    </script>
+    document.getElementById('tindakLanjutButton').addEventListener('click', function() {
+        alert('Laporan Ditindak Lanjuti');
+    });
+</script>
 

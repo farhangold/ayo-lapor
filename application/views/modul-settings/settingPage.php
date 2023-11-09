@@ -3,7 +3,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
 ?>
 
     <?php if (strtolower($user->role) == "mahasiswa") { ?>
-        <div class="container" style="margin-top: 100px;">
+        <div class="container" style="margin-top: 6rem; margin-bottom: 5rem;">
             <h1 class="mt-5">Settings</h1>
             <ul class="list-group mt-4">
                 <li class="list-group-item"><a href="<?= base_url('settings/faq') ?>">FAQ</a></li>
@@ -14,7 +14,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
             </ul>
         </div>
      <?php }else if(strtolower($user->role) == "kemahasiswaan"){ ?>          
-        <div class="container" style="margin-top: 100px;">
+        <div class="container" style="margin-top: 6rem; margin-bottom: 5rem;">
             <h1 class="mt-5">Settings</h1>
             <ul class="list-group mt-4">
                 <li class="list-group-item"><a href="<?= site_url('settings/faq') ?>">FAQ</a></li>
@@ -25,7 +25,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
             </ul>
         </div>
     <?php }else{ ?>
-        <div class="container" style="margin-top: 100px;">
+        <div class="container" style="margin-top: 6rem; margin-bottom: 5rem;">
             <h1 class="mt-5">Settings</h1>
             <ul class="list-group mt-4">
                 <li class="list-group-item"><a href="<?= site_url('settings/faq') ?>">FAQ</a></li>
@@ -36,4 +36,3 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
             </ul>
         </div>
     <?php } ?>
-    <br><br><br><br>        <br><br><br><br>       <br><br><br><br><br><br>

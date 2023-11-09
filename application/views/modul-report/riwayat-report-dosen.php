@@ -9,11 +9,11 @@
                 <table id="myTable" class="table table-bordered table-hover  ">
                     <thead class="thead-dark text-white">
                         <tr>
-                        <th style="background-color:red;" class="text-white text-center"scope="col">NO</th>
-                        <th style="background-color:red;" class="text-white text-center"scope="col">Name</th>
-                        <th style="background-color:red;" class="text-white text-center"scope="col">Date</th>
-                        <th style="background-color:red;" class="text-white text-center"scope="col">Status</th>
-                        <th style="background-color:red;" class="text-white text-center"scope="col">Action</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center"scope="col">NO</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center"scope="col">Name</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center"scope="col">Date</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center"scope="col">Status</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center"scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>

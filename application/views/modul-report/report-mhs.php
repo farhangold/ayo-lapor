@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Ayo Lapor-Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .reportbg {
-            background-image: url("<?= base_url('assets/images/pana.png') ?>");
-            background-size: cover;
-            height: 100vh;
-            width: 100vh;
-        }
-    </style>
-</head>
-<body>
-    <div>
+    <div style="margin-top: 4rem; margin-bottom: -3rem;">
         <div class="row">
             <div class="col-md-7 justify-content-center">
                 <div style="padding:100px;">
@@ -21,31 +6,32 @@
                         <h1>Reporting Form</h1><br>
                         <h2>Let's Get Your Report</h2><br>
                     </div>
-                    <form class="user">
+                    <form class="user" method="POST" enctype="multipart/form-data" action="<?= base_url("Report/reportmhs") ?>">
                         <div class="form-group row">
                             <label for="userType"></label>
-                            <select select class="form-control" id="userType">
-                                <option value="Selected">Type Report</option>
+                            <select select class="form-control" id="jenis_laporan" name="jenis_laporan">
+                                <option value="">--- Type Report ---</option>
                                 <option value="Pelecehan">Fractions</option>
                                 <option value="Kekerasan">Violence</option>
                             </select>
                         </div>
                         <div class="form-group row">
-                            <label for="fileUpload">Upload of Proof</label>
-                            <input type="file" class="form-control-file" id="fileUpload" name="fileUpload">
+                            <label for="bukti_laporan">Upload of Proof</label>
+                            <input type="file" class="form-control-file" id="bukti_laporan" name="bukti_laporan">
+                        </div>
+
+                        <div class="form-group row">
+                            <textarea class="form-control form-control-user summernote" id="keterangan" name="keterangan" placeholder="Description"></textarea>
                         </div>
                         <div class="form-group row">
-                            <input type="text" class="form-control form-control-user" id="keterangan" aria-describedby="keterangan" placeholder="Description">
-                        </div>
-                        <div class="form-group row">
-                            <a id="SaveButton"onclick="savedraft()" class="btn btn-primary text-white btn-user btn-block">
+                            <button type="submit" id="SaveButton" name="status" value="Save as Draft" class="btn btn-primary text-white btn-user btn-block">
                                 Save As Draft
-                            </a>
+                            </button>
                         </div>
                         <div class="form-group row">
-                            <a id="SendButton"onclick="submit()" class="btn btn-success text-white btn-user btn-block">
+                            <button type="submit" id="SendButton" name="status" value="Submitted" class="btn btn-success text-white btn-user btn-block">
                                 Send Report
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -65,14 +51,14 @@
             var keterangan = $("#keterangan").val();
             var fileUpload = $("#fileUpload").val();
 
-            if (userType === "Pelecehan" || userType === "Kekerasan" && keterangan !== "" && fileUpload !== "") {
+            if ((userType == "Pelecehan" || userType == "Kekerasan") && keterangan !== "" && fileUpload !== "") {
                 alert("Reporting Success");
-            } else if(userType === "Pelecehan"||userType === "Kekerasan" && keterangan == "" && fileUpload !== "") {
-                alert("Masukan Keterangan");
-            }else if(userType === "Pelecehan"||userType === "Kekerasan" && keterangan !== "" && fileUpload == ""){
-                alert("Masukan Bukti");
-            }else if(userType === "Pelecehan"||userType === "Kekerasan" && keterangan == "" && fileUpload == ""){
-                alert("Masukan Bukti dan Keterangan");
+            } else if ((userType == "Pelecehan" || userType == "Kekerasan") && keterangan == "" && fileUpload !== "") {
+                alert("Input Description");
+            } else if ((userType == "Pelecehan" || userType == "Kekerasan") && keterangan !== "" && fileUpload == "") {
+                alert("Masukan Proof");
+            } else if ((userType == "Pelecehan" || userType == "Kekerasan") && keterangan == "" && fileUpload == "") {
+                alert("Input Proof And Description");
             }
         }
 
@@ -87,6 +73,5 @@
             }
         }
     </script>
-</body>
-</html>
+
 

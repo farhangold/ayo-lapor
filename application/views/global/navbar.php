@@ -18,9 +18,6 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardPage') ?>">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reportmhs') ?>">REPORT</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/myreport') ?>">MY REPORT</a>
                     </li>
                     <li class="nav-item">

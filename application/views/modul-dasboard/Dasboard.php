@@ -6,7 +6,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
     alt="Responsive image" style="width: 50%; height: 50%;">
 </div>
 
-<div class="container">
+<div class="container" >
   <div class="text-left" style="margin-top: 50px;font-family: alegreya SC;">
     <h4 style="margin-left:50px">ABOUT US</h4>
     <hr class="border-danger" style="max-width: 1000px;">

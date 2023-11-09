@@ -20,6 +20,7 @@ class Report extends CI_Controller {
 	 */
 	public function __construct() {
 		parent::__construct();
+
 		if($this->session->userdata('username') == null){
 			redirect(base_url('login/LoginPage'));
 		}
@@ -65,16 +66,51 @@ class Report extends CI_Controller {
 	}
 
 	public function reportmhs(){
+		$this->form_validation->set_rules('jenis_laporan',"Jenis Laporan",'required');
+		if ($this->form_validation->run()) {
+			$config['upload_path']   ='./assets/bukti/';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg'; 
+			$config['max_size']      = 10048; 
+			$config['encrypt_name']  = TRUE;
+
+			$this->load->library('upload', $config);
+			$data = [
+				'jenis_laporan' => $this->input->post('jenis_laporan'),
+				'keterangan' => $this->input->post('keterangan'),
+				'status' =>$this->input->post('status'),
+				'tanggal'=>date('Y-m-d'),
+				'user' => $this->session->userdata('username')
+			];
+			if ($this->upload->do_upload('bukti_laporan')) {
+				$upload_data = $this->upload->data();
+				$file_name = $upload_data['file_name'];
+				$data['bukti_laporan'] = $file_name;
+			}
+			$this->db->insert("trx_report",$data);
+			return redirect(base_url('Report/myreport'));
+		}
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/report-mhs');
 		$this->load->view('global/foot');
 	}
 
+	function delete($id){
+		$data = $this->db->get_where('trx_report',['id'=>$id])->row();
+		$file_path = FCPATH . 'assets/bukti/' . $data->bukti_laporan;
+		if (file_exists($file_path)) {
+			unlink($file_path);
+		}
+		$this->db->where('id',$id);
+		$this->db->delete('trx_report');
+		return redirect(base_url('Report/myreport'));
+	}
+
 	public function myreport(){
+		$data['data'] = $this->db->get_where('trx_report',['user'=>$this->session->userdata('username')])->result();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/myreport');
+		$this->load->view('modul-report/myreport',$data);
 		$this->load->view('global/foot');
 	}
 

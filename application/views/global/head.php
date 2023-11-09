@@ -21,6 +21,16 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <!-- Tautan ke berkas style.css di direktori assets -->
     <link rel="stylesheet" href="<?= base_url('assets/style.css') ?>" />
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .reportbg {
+            background-image: url("<?= base_url('assets/images/pana.png') ?>");
+            background-size: cover;
+            height: 100vh;
+            width: 100vh;
+        }
+    </style>
 
     <style>
       .navbar {
@@ -29,6 +39,9 @@
       
       .content {
           padding-top: 70px;
+      }
+      .mycontainer{
+        padding:100px;
       }
       
       .square {

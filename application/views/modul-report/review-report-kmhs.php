@@ -1,20 +1,16 @@
 
-    <div class="container">
-        <br><br>
-        <br><br>
+    <div class="container mb-5"style="margin-top: 6rem;">
         <h2 class="text-center text-DARK">REVIEW REPORT</h2>
-        <br><br>
         <div class="row justify-content-center">
-
             <div class="col-lg-10">
                 <table id="myTable" class="table table-bordered table-hover  ">
                     <thead >
                         <tr>
-                        <th style="background-color:red;" class="text-white text-center" scope="col">NO</th>
-                        <th style="background-color:red;" class="text-white text-center" scope="col">Name</th>
-                        <th style="background-color:red;" class="text-white text-center" scope="col">Date</th>
-                        <th style="background-color:red;" class="text-white text-center" scope="col">Status</th>
-                        <th style="background-color:red;" class="text-white text-center" scope="col">Action</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">NO</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Name</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Date</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Status</th>
+                        <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -7,26 +7,26 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
 </div>
 
 <div class="container" >
-  <div class="text-left" style="margin-top: 50px;font-family: alegreya SC;">
-    <h4 style="margin-left:50px">ABOUT US</h4>
-    <hr class="border-danger" style="max-width: 1000px;">
-  </div>
-  <div class="row" style="margin-left:20px">
-    <div class="col-md-12 col-lg-4">
-        <div style="font-family: alegreya SC;text-align: justify;">
-            We have developed the 'AyoLapor' application, designed to assist victims experiencing any form of violence and harassment within the academic environment in reporting incidents to the campus authorities. 
+    <div class="text-left" style="margin-top: 50px;font-family: alegreya SC;">
+        <h4 style="margin-left:50px">ABOUT US</h4>
+        <hr class="border-danger" style="max-width: 1000px;">
         </div>
-        <div style="font-family: alegreya SC;text-align: justify;margin-top:20px;">
-            This application is specifically tailored for Telkom University students who have experienced any form of violence or harassment. The goal of this application is to facilitate a seamless connection between the victims and the campus authorities, making it easier for them to report incidents and seek consultation from the university.
+        <div class="row" style="margin-left:20px">
+        <div class="col-md-12 col-lg-4">
+            <div style="font-family: alegreya SC;text-align: justify;">
+                We have developed the 'AyoLapor' application, designed to assist victims experiencing any form of violence and harassment within the academic environment in reporting incidents to the campus authorities. 
+            </div>
+            <div style="font-family: alegreya SC;text-align: justify;margin-top:20px;">
+                This application is specifically tailored for Telkom University students who have experienced any form of violence or harassment. The goal of this application is to facilitate a seamless connection between the victims and the campus authorities, making it easier for them to report incidents and seek consultation from the university.
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <img src="<?= base_url('assets') ?>/images/1.png" class="rounded mx-auto d-block img-thumbnail" alt="Responsive image" style="max-width: 90%; height: auto;">
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <img src="<?= base_url('assets') ?>/images/2.png" class="rounded mx-auto d-block img-thumbnail" alt="Responsive image" style="max-width: 90%; height: auto;">
         </div>
     </div>
-    <div class="col-md-12 col-lg-4">
-      <img src="<?= base_url('assets') ?>/images/1.png" class="rounded mx-auto d-block img-thumbnail" alt="Responsive image" style="max-width: 90%; height: auto;">
-    </div>
-    <div class="col-md-12 col-lg-4">
-      <img src="<?= base_url('assets') ?>/images/2.png" class="rounded mx-auto d-block img-thumbnail" alt="Responsive image" style="max-width: 90%; height: auto;">
-    </div>
-  </div>
 </div>
 
 <?php if (strtolower($user->role) == "mahasiswa") { ?>

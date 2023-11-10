@@ -58,10 +58,16 @@ class Report extends CI_Controller {
 		$this->load->view('global/foot');
 	}
 
-	public function detailreport(){
+	public function detailreport($id = ""){
+		if ($id!="") {
+			$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
+		}else{
+			$data['data'] = null;
+		}
+
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/detailreport');
+		$this->load->view('modul-report/detailreport',$data);
 		$this->load->view('global/foot');
 	}
 
@@ -74,6 +80,7 @@ class Report extends CI_Controller {
 
 	public function reportmhs(){
 		$this->form_validation->set_rules('jenis_laporan',"Jenis Laporan",'required');
+		$this->form_validation->set_rules('keterangan',"Keterangan",'required');
 		if ($this->form_validation->run()) {
 			$config['upload_path']   ='./assets/bukti/';
 			$config['allowed_types'] = 'gif|jpg|png|jpeg'; 

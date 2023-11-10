@@ -1,7 +1,6 @@
 <?php
 $user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
 ?>
-
     <?php if (strtolower($user->role) == "mahasiswa") { ?>
         <div class="container" style="margin-top: 6rem; margin-bottom: 5rem;">
             <h1 class="mt-5">Settings</h1>

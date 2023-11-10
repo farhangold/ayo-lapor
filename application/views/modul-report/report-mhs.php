@@ -10,10 +10,11 @@
                         <div class="form-group row">
                             <label for="userType"></label>
                             <select select class="form-control" id="jenis_laporan" name="jenis_laporan">
-                                <option value="">--- Type Report ---</option>
+                                <option>--- Type Report ---</option>
                                 <option value="Pelecehan">Fractions</option>
                                 <option value="Kekerasan">Violence</option>
                             </select>
+                            <?= form_error('jenis_laporan', '<span class="text-danger">', '</span>') ?>
                         </div>
                         <div class="form-group row">
                             <label for="bukti_laporan">Upload of Proof</label>
@@ -22,6 +23,7 @@
 
                         <div class="form-group row">
                             <textarea class="form-control form-control-user summernote" id="keterangan" name="keterangan" placeholder="Description"></textarea>
+                            <?= form_error('keterangan', '<span class="text-danger">', '</span>') ?>
                         </div>
                         <div class="form-group row">
                             <button type="submit" id="SaveButton" name="status" value="Save as Draft" class="btn btn-primary text-white btn-user btn-block">
@@ -44,34 +46,3 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        function SendButton() {
-            var userType = $("#userType").val();
-            var keterangan = $("#keterangan").val();
-            var fileUpload = $("#fileUpload").val();
-
-            if ((userType == "Pelecehan" || userType == "Kekerasan") && keterangan !== "" && fileUpload !== "") {
-                alert("Reporting Success");
-            } else if ((userType == "Pelecehan" || userType == "Kekerasan") && keterangan == "" && fileUpload !== "") {
-                alert("Input Description");
-            } else if ((userType == "Pelecehan" || userType == "Kekerasan") && keterangan !== "" && fileUpload == "") {
-                alert("Masukan Proof");
-            } else if ((userType == "Pelecehan" || userType == "Kekerasan") && keterangan == "" && fileUpload == "") {
-                alert("Input Proof And Description");
-            }
-        }
-
-
-        function SaveButton() {
-            var userType = $("#userType").val()
-            console.log(userType)
-            if (userType === "Pelecehan") {
-                alert("The report is saved in draft"); 
-            }else if (userType === "Kekerasan") {
-                alert("The report is saved in draft");
-            }
-        }
-    </script>
-
-

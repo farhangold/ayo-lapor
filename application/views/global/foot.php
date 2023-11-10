@@ -1,4 +1,4 @@
-<footer id="footer" class="text-white" style="background-color:black;padding:50px;margin-top:50px;">
+<footer id="footer" class="text-white" style="background-color:black;padding:50px;">
       <div  class="text-center">
         <h2>CONTACT US</h2>
         <p >Contact us for assistance and support through 'AyoLapor' and 
@@ -27,6 +27,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+   
   <script>
     $(document).ready(function() {
       $('#myTable').DataTable();

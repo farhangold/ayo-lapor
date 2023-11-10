@@ -53,7 +53,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
 <?php } ?>
 <div class="container">
     <div class="text-left;" style="margin-top: 50px;">
-        <h4 style="margin-left:50px; font-family: alegreya SC;" ;">NEWS AND INFOMATION</h4>
+        <h4 style="margin-left:50px; font-family: alegreya SC;">NEWS AND INFOMATION</h4>
     </div>
     <div class="row,col-md-6">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -65,21 +65,21 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
           <div class="carousel-inner" style="margin-top:50px">
             <div class="carousel-item active text-center">  
               <img class="d-block mx-auto" width="450px" src="<?= base_url('assets') ?>/images/1.1.png" alt="First slide">
-              <h3 style="font-family: alegreya SC;margin-right:80px;margin-top:10px;">
+              <!-- <h3 style="font-family: alegreya SC;">
                 "5 Signs You're Being Harassed
-              </h3>
+              </h3> -->
             </div>
             <div class="carousel-item text-center">
               <img class="d-block mx-auto" width="450px" src="<?= base_url('assets') ?>/images/1.2.png" alt="Second slide">
-              <h3 style="font-family: alegreya SC;margin-right:80px;margin-top:10px;">
+              <!-- <h3 style="font-family: alegreya SC;">
                 Together Against Oppression: Ayo Lapor Encourages Action
-              </h3>
+              </h3> -->
             </div>
             <div class="carousel-item text-center">
               <img class="d-block mx-auto" width="450px" src="<?= base_url('assets') ?>/images/1.3.png" alt="Third slide">
-              <h3 style="font-family: alegreya SC;margin-right:80px;margin-top:10px;">
+              <!-- <h3 style="font-family: alegreya SC;">
                 Shedding Light on Harassment Issues for a Safer Society
-              </h3>
+              </h3> -->
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -97,3 +97,4 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
         </div>
     </div>
 </div>
+<br>

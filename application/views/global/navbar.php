@@ -31,7 +31,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardPage') ?>">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reviewreportkemahasiswaan') ?>">REVIEW REPORT</a>
+                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reviewreportkemahasiswaan') ?>">REPORT</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/riwayatreportkmhs') ?>">HISTORY REPORT</a>
@@ -47,7 +47,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardPage') ?>">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reviewreport') ?>">REVIEW REPORT</a>
+                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/reviewreport') ?>">REPORT</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/riwayatreportdosen') ?>">HISTORY REPORT</a>

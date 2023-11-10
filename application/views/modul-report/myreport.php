@@ -1,5 +1,5 @@
 
-    <div class="mycontainer mb-5"style="margin-top: 6rem;">
+    <div class="mycontainer mb-5"style="margin-top: 1rem;">
         <h2 class="text-center text-DARK">MY REPORT</h2>
         <div class="row">
             <div class="col-md-12">
@@ -37,7 +37,7 @@
 
                                 $action = " <a href='".base_url('Report/detailreport/')."' class='detail-button btn btn-info text-white '>Detail</a> &nbsp;";
                                 if ($value->status == "Save as Draft" ) {
-                                    $action .= "<button class='detail-button btn btn-warning text-white '>Edit</button> &nbsp;
+                                    $action .= " <a href='".base_url('Report/editreport/')."' class='detail-button btn btn-warning text-white '>Edit</a> &nbsp;
                                     <a href='".base_url('Report/delete/'.$value->id)."' class='detail-button btn btn-danger text-white '>Delete</a>";
                                 }
 

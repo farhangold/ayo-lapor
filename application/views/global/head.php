@@ -27,8 +27,6 @@
         .reportbg {
             background-image: url("<?= base_url('assets/images/pana.png') ?>");
             background-size: cover;
-            height: 100vh;
-            width: 100vh;
         }
     </style>
 

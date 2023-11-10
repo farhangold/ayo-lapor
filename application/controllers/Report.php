@@ -51,10 +51,10 @@ class Report extends CI_Controller {
 		$this->load->view('global/foot');
 	}
 
-	public function detailreportdosen(){
+	public function detailreport2(){
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/detailreport-dosen');
+		$this->load->view('modul-report/detailreport2');
 		$this->load->view('global/foot');
 	}
 
@@ -62,6 +62,13 @@ class Report extends CI_Controller {
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/detailreport');
+		$this->load->view('global/foot');
+	}
+
+	public function editreport(){
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-report/editreport');
 		$this->load->view('global/foot');
 	}
 

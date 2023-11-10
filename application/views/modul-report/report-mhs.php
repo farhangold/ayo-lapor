@@ -1,4 +1,4 @@
-    <div style="margin-top: 4rem; margin-bottom: -3rem;">
+    <div>
         <div class="row">
             <div class="col-md-7 justify-content-center">
                 <div style="padding:100px;">
@@ -46,7 +46,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        function submit() {
+        function SendButton() {
             var userType = $("#userType").val();
             var keterangan = $("#keterangan").val();
             var fileUpload = $("#fileUpload").val();
@@ -63,7 +63,7 @@
         }
 
 
-        function savedraft() {
+        function SaveButton() {
             var userType = $("#userType").val()
             console.log(userType)
             if (userType === "Pelecehan") {

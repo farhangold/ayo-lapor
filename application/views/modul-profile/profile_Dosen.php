@@ -10,9 +10,9 @@
         <div class="col-md-3">
             <!-- Tambahkan gambar profil di sini -->
             <img src="<?= base_url('assets') ?>/images/user.png" alt="Profile Image" class="img-fluid">
-            <p><strong></strong> Joko Anwar</p>
-            <p><strong></strong> JAW</p>
-            <p><strong></strong> Dosen Wali</p>
+            <p><strong></strong> <?= $profile['first_name']." ".$profile['last_name'] ?></p>
+            <p><strong></strong> <?= $profile['nip'] ?></p>
+            <p><strong></strong> <?= $profile['role'] ?></p>
         </div>
         <div class="col-md-9">
             <h1>Profile Dosen Wali</h1><hr>

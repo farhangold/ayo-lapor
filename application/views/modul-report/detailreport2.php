@@ -44,11 +44,11 @@
 
 <script>
     document.getElementById('tolakButton').addEventListener('click', function() {
-        alert('Laporan Ditolak');
+        alert('Rejected Report');
     });
 
     document.getElementById('tindakLanjutButton').addEventListener('click', function() {
-        alert('Laporan Ditindak Lanjuti');
+        alert('Accepted Report');
     });
 </script>
 

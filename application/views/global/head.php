@@ -23,6 +23,15 @@
     <link rel="stylesheet" href="<?= base_url('assets/style.css') ?>" />
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        .loginbg {
+            background-image: url("<?= base_url('assets/images/login-image.jpg') ?>");
+            background-size: cover;
+            height: 100vh;
+            width: 100vh;
+        }
+    </style>
     <style>
         .reportbg {
             background-image: url("<?= base_url('assets/images/pana.png') ?>");

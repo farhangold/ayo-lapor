@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Ayo Lapor-Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .loginbg {
-            background-image: url("<?= base_url('assets/images/login-image.jpg') ?>");
-            background-size: cover;
-            height: 100vh;
-            width: 100vh;
-        }
-    </style>
-</head>
-<body>
+
     <div>
         <div class="row">
             <div class="col-md-7 justify-content-center">
@@ -93,5 +79,3 @@
     }
 </script>
 
-</body>
-</html>

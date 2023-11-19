@@ -51,7 +51,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
     </div>
 </div>
 <?php } ?>
-<div class="container">
+<div class="container-fluid">
     <div class="text-left;" style="margin-top: 50px;">
         <h4 style="margin-left:50px; font-family: alegreya SC;">NEWS AND INFOMATION</h4>
     </div>
@@ -64,19 +64,19 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
           </ol>
           <div class="carousel-inner" style="margin-top:50px">
             <div class="carousel-item active text-center">  
-              <img class="d-block mx-auto" width="450px" src="<?= base_url('assets') ?>/images/1.1.png" alt="First slide">
+              <img class="d-block mx-auto" width="90%"  src="<?= base_url('assets') ?>/images/1.1.png" alt="First slide">
               <!-- <h3 style="font-family: alegreya SC;">
                 "5 Signs You're Being Harassed
               </h3> -->
             </div>
             <div class="carousel-item text-center">
-              <img class="d-block mx-auto" width="450px" src="<?= base_url('assets') ?>/images/1.2.png" alt="Second slide">
+              <img class="d-block mx-auto" width="90%"  src="<?= base_url('assets') ?>/images/1.2.png" alt="Second slide">
               <!-- <h3 style="font-family: alegreya SC;">
                 Together Against Oppression: Ayo Lapor Encourages Action
               </h3> -->
             </div>
             <div class="carousel-item text-center">
-              <img class="d-block mx-auto" width="450px" src="<?= base_url('assets') ?>/images/1.3.png" alt="Third slide">
+              <img class="d-block mx-auto" width="90%"  src="<?= base_url('assets') ?>/images/img1.jpg!d" alt="Third slide">
               <!-- <h3 style="font-family: alegreya SC;">
                 Shedding Light on Harassment Issues for a Safer Society
               </h3> -->
@@ -90,7 +90,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
           </a>
           <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span aria-hidden="true" style="";>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+            <svg class="bg-primary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
             </span>
             <span class="sr-only" style="color:black;"></span>
           </a>

@@ -13,6 +13,7 @@ class Login extends CI_Controller {
 	}
 	public function LoginPage()
 	{
+		$this->load->view('global/head');
 		$this->load->view('modul-login/login');
 		$this->load->view('global/foot');
 	}

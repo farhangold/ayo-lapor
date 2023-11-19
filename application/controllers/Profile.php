@@ -5,16 +5,12 @@ class Profile extends CI_Controller {
 
     public function Profilepage()
     {
-        // Data profil
-        $data['profile'] = array(
-            'first_name' => 'Usep',
-            'last_name' => 'Randana',
-            'email' => 'usepR@example.com',
-            'city' => 'Kost Pink House',
-            'country' => 'Indonesia',
-            'description' => 'Saya Adalah Seorang Mahasiswa Di Telkom University!'
-        );
 
+        $user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
+        $mytable = "mahasiswa";
+        // Data profil
+        $data['profile'] = $this->db->get_where($mytable,['id'=>$user->parent_id])->row_array();
+        $data['profile']['role'] = $user->role;
         $this->load->view('global/head');
         $this->load->view('global/navbar');
         $this->load->view('modul-profile/profile', $data); // Melewatkan data profil ke view
@@ -22,16 +18,11 @@ class Profile extends CI_Controller {
     }
     public function ProfilepageDosen()
     {
+        $user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
+        $mytable = "dosen_wali";
         // Data profil
-        $data['profile'] = array(
-            'first_name' => 'Joko',
-            'last_name' => 'Anwar',
-            'email' => 'jokoWar@example.com',
-            'city' => 'Tegal',
-            'country' => 'Indonesia',
-            'description' => 'Saya Adalah Seorang Dosen Wali Di Telkom University!'
-        );
-
+        $data['profile'] = $this->db->get_where($mytable,['id'=>$user->parent_id])->row_array();
+        $data['profile']['role'] = $user->role; 
         $this->load->view('global/head');
         $this->load->view('global/navbar');
         $this->load->view('modul-profile/profile_Dosen', $data); // Melewatkan data profil ke view
@@ -39,14 +30,11 @@ class Profile extends CI_Controller {
     }
     public function ProfilepageKmh()
     {
+        $user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
+        $mytable = "kmhs";
         // Data profil
-        $data['profile'] = array(
-            'first_name' => 'Ahmad',
-            'last_name' => 'Suryadi',
-            'email' => 'ahmadSur@example.com',
-            'description' => 'Saya Kepala Kemahsiswaan Telkom!'
-        );
-
+        $data['profile'] = $this->db->get_where($mytable,['id'=>$user->parent_id])->row_array();
+        $data['profile']['role'] = $user->role; 
         $this->load->view('global/head');
         $this->load->view('global/navbar');
         $this->load->view('modul-profile/profile_Kmh', $data); // Melewatkan data profil ke view

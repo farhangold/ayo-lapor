@@ -8,7 +8,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
 
         <!-- Toggle button for mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></ span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,7 +26,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>
                     </li>
-               <?php }else if(strtolower($user->role) == "kemahasiswaan"){ ?>
+                <?php }else if(strtolower($user->role) == "kemahasiswaan"){ ?>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Dashboard/DasboardPage') ?>">HOME</a>
                     </li>
@@ -56,8 +56,8 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>
                     </li>
                 <?php } ?>
-                
             </ul>
+            <a class="navbar-brand" href=""><img src="<?= base_url('assets') ?>/images/profile.png" alt=""></a>
         </div>
     </div>
 </nav>

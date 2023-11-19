@@ -1,9 +1,9 @@
 <?php
 $user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
 ?>
-<div class="content">
+<div class="content"style="margin-top: 2rem;">
     <img src="<?= base_url('assets') ?>/images/ayolapor.png" class="rounded mx-auto d-block img-thumbnail" 
-    alt="Responsive image" style="width: 50%; height: 50%;">
+    alt="Responsive image" style="width: 80%; height: 40%;">
 </div>
 
 <div class="container" >
@@ -51,6 +51,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
     </div>
 </div>
 <?php } ?>
+
 <div class="container">
     <div class="text-left;" style="margin-top: 50px;">
         <h4 style="margin-left:50px; font-family: alegreya SC;">NEWS AND INFOMATION</h4>

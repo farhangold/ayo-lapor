@@ -32,7 +32,7 @@ class Settings extends CI_Controller {
 		$this->load->view('global/foot');
 	}
 
-	function logout(){
+	function logouts(){
 		$this->session->unset_userdata('username');
 		redirect(base_url('login/LoginPage'));
 	}

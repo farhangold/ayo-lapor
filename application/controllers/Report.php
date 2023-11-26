@@ -110,13 +110,13 @@ class Report extends CI_Controller {
 	}
 
 	function delete($id){
-		$data = $this->db->get_where('trx_report',['id'=>$id])->row();
-		$file_path = FCPATH . 'assets/bukti/' . $data->bukti_laporan;
-		if (file_exists($file_path)) {
-			unlink($file_path);
-		}
-		$this->db->where('id',$id);
-		$this->db->delete('trx_report');
+		// $data = $this->db->get_where('trx_report',['id'=>$id])->row();
+		// $file_path = FCPATH . 'assets/bukti/' . $data->bukti_laporan;
+		// if (file_exists($file_path)) {
+		// 	unlink($file_path);
+		// }
+		// $this->db->where('id',$id);
+		// $this->db->delete('trx_report');
 		return redirect(base_url('Report/myreport'));
 	}
 

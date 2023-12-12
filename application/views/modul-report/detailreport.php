@@ -10,23 +10,23 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                 <?php if ($data != null) { ?>
                     <div class="mb-3">
                         <label for="NameInput" class="form-label">Name Student</label>
-                        <input type="text" id="KeteranganInput" class="form-control" value="<?= $data->user ?>">
+                        <input type="text" id="KeteranganInput" class="form-control" value="<?= $data->user ?> " disabled>
                     </div>
                     <div class="mb-3">
                         <label for="NameInput" class="form-label">Date</label>
-                        <input type="date" id="KeteranganInput" class="form-control" placeholder="Date" value="<?= $data->tanggal ?>">
+                        <input type="date" id="KeteranganInput" class="form-control" placeholder="Date" value="<?= $data->tanggal ?>" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="jenisinput" class="form-label">Type Fraction</label>
-                        <input type="text" id="JenisInput" class="form-control" placeholder="Jenis Pelecehan"value="<?= $data->jenis_laporan ?>">
+                        <input type="text" id="JenisInput" class="form-control" placeholder="Jenis Pelecehan"value="<?= $data->jenis_laporan ?>" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="BuktiInput" class="form-label">Prof of Report</label><br>
-                        <img src='<?= base_url('assets/bukti/'.$data->bukti_laporan) ?>' width='240px' alt='-'>
+                        <img src='<?= base_url('assets/bukti/'.$data->bukti_laporan) ?>' width='240px' alt='-' disabled>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Description</label>
-                        <textarea class="form-control form-control-user summernote" id="keterangan" name="keterangan" placeholder="Description"><?= $data->keterangan ?></textarea>
+                        <textarea class="form-control form-control-user summernote" id="keterangan" name="keterangan" placeholder="Description" ><?= $data->keterangan ?></textarea >
                     </div>
                     <div class="mb-3" >
                         <label for="status" class="form-label">Status</label>
@@ -35,23 +35,23 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                     <?php }else{ ?>
                         <div class="mb-3">
                         <label for="NameInput" class="form-label">Name Student</label>
-                        <input type="text" id="KeteranganInput" class="form-control" placeholder="Name Student" value="farhanmulya">
+                        <input type="text" id="KeteranganInput" class="form-control" placeholder="Name Student" value="han" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="NameInput" class="form-label">Date</label>
-                        <input type="date" id="KeteranganInput" class="form-control" placeholder="Date" value="<?= date('Y-m-d')?>">
+                        <input type="date" id="KeteranganInput" class="form-control" placeholder="Date" value="<?= date('Y-m-d')?>" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="jenisinput" class="form-label">Type Fraction</label>
-                        <input type="text" id="JenisInput" class="form-control" placeholder="Jenis Pelecehan" value="Fractions">
+                        <input type="text" id="JenisInput" class="form-control" placeholder="Jenis Pelecehan" value="Fractions" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="BuktiInput" class="form-label">Prof of Report</label><br>
-                        <img src='<?= base_url('assets/images/1.1.png') ?>' width='240px' alt='-'>
+                        <img src='<?= base_url('assets/images/1.1.png') ?>' width='240px' alt='-' disabled>
                     </div>  
                     <div class="mb-3">
                         <label for="KeteranganInput" class="form-label">Descriptipn</label>
-                        <input type="text" id="KeteranganInput" class="form-control" placeholder="Descriptions" value="Blablabla">
+                        <textarea class="form-control form-control-user summernote" id="keterangan" name="keterangan" placeholder="Description" ></textarea disabled>
                     </div>
                     <div class="mb-3" >
                         <label for="status" class="form-label">Status</label>

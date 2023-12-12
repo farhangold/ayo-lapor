@@ -43,7 +43,7 @@
 
                                         $action = " <a href='".base_url('Report/detailreport/'.$value->id)."' class='detail-button btn btn-info text-white '>Detail</a> &nbsp;";
                                         if ($value->status == "Save as Draft" ) {
-                                            $action .= " <a href='".base_url('Report/editreport/')."' class='detail-button btn btn-warning text-white '>Edit</a> &nbsp;
+                                            $action .= " <a href='".base_url('Report/editreport/'.$value->id)."' class='detail-button btn btn-warning text-white '>Edit</a> &nbsp;
                                             <a href='".base_url('Report/delete/'.$value->id)."' class='detail-button btn btn-danger text-white '>Delete</a>";
                                         }
 

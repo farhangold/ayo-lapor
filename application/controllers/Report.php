@@ -25,10 +25,6 @@ class Report extends CI_Controller {
 			redirect(base_url('login/LoginPage'));
 		}
 	}
-	public function reportsuccess()
-	{
-		$this->load->view('modul-report/reportsuccess');
-	}
 
 	public function reviewreport(){
 		$this->load->view('global/head');
@@ -71,10 +67,41 @@ class Report extends CI_Controller {
 		$this->load->view('global/foot');
 	}
 
-	public function editreport(){
+	public function editreport($id){
+		$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
+		
+		$this->form_validation->set_rules('jenis_laporan',"Jenis Laporan",'required');
+		$this->form_validation->set_rules('keterangan',"Keterangan",'required');
+		if ($this->form_validation->run()) {
+			$config['upload_path']   ='./assets/bukti/';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg'; 
+			$config['max_size']      = 10048; 
+			$config['encrypt_name']  = TRUE;
+
+			$this->load->library('upload', $config);
+			$dataUpdate = [
+				'jenis_laporan' => $this->input->post('jenis_laporan'),
+				'keterangan' => $this->input->post('keterangan'),
+				'status' =>$this->input->post('status'),
+				'tanggal'=>date('Y-m-d'),
+				'user' => $this->session->userdata('username')
+			];
+			if ($this->upload->do_upload('bukti_laporan')) {
+				$upload_data = $this->upload->data();
+				$file_name = $upload_data['file_name'];
+				$dataUpdate['bukti_laporan'] = $file_name;
+				$file_path = FCPATH . 'assets/bukti/' . $data['data']->bukti_laporan;
+				if (file_exists($file_path)) {
+					unlink($file_path);
+				}
+			}
+			
+			$this->db->update("trx_report",$dataUpdate,['id'=>$id]);
+			return redirect(base_url('Report/myreport'));
+		}
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/editreport');
+		$this->load->view('modul-report/editreport', $data);
 		$this->load->view('global/foot');
 	}
 

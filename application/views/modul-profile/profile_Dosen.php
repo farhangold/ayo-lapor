@@ -1,25 +1,12 @@
 <div class="mycontainer" style="margin-top: 1rem;">
     <div class="row">
         <div class="col-md-3">
-<<<<<<< HEAD
-            <div class="card">
-                <div class="card-body text-center">
-                    <!-- Tambahkan gambar profil di sini -->
-                    <img src="<?= base_url('assets') ?>/images/user.png" alt="Profile Image" class="img-fluid">
-                    <p><strong></strong> Joko Anwar</p>
-                    <p><strong></strong> JAW</p>
-                    <p><strong></strong> Dosen Wali</p>
-                </div>
-            </div>   
-        </div> 
-=======
             <!-- Tambahkan gambar profil di sini -->
             <img src="<?= base_url('assets') ?>/images/user.png" alt="Profile Image" class="img-fluid">
             <p><strong></strong> <?= $profile['first_name']." ".$profile['last_name'] ?></p>
             <p><strong></strong> <?= $profile['nip'] ?></p>
             <p><strong></strong> <?= $profile['role'] ?></p>
         </div>
->>>>>>> 01369d928c9c1e2264c9cdebddc0093eca2eb777
         <div class="col-md-9">
             <div class="card">
                 <div class="card-body">

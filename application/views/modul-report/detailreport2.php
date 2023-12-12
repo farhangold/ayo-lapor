@@ -23,7 +23,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="KeteranganInput" class="form-label">Descriptipn</label>
-                        <input type="text" id="KeteranganInput" class="form-control" placeholder="Descriptions" value="Blablabla">
+                        <textarea class="form-control form-control-user summernote" id="keterangan" name="keterangan" placeholder="Description" disabled>BLablabla</textarea>
                     </div>
                 </fieldset>
             </form>

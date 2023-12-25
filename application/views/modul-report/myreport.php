@@ -17,6 +17,7 @@
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">NO</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Name</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Date</th>
+                                <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Jenis Laporan</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Bukti Laporan</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Keterangan</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Status</th>
@@ -31,12 +32,17 @@
                                         $url = base_url("assets/bukti/".$value->bukti_laporan);
                                         $color = "warning";
                                         if ($value->status == "Submitted") {
+                                            $color = "info";
+                                        }elseif ($value->status == "Rejected Report"){
+                                            $color = "danger";
+                                        }elseif ($value->status == "Accepted Report"){
                                             $color = "success";
                                         }
                                         echo "<tr>";
                                         echo "<td>$no</td>";
                                         echo "<td>$value->user</td>";
                                         echo "<td>$value->tanggal</td>";
+                                        echo "<td>$value->jenis_laporan</td>";
                                         echo "<td><img src='$url' width='120px' alt='-'></td>";
                                         echo "<td>$value->keterangan</td>";
                                         echo "<td><span class='badge badge-$color text-white'>$value->status</span></td>";

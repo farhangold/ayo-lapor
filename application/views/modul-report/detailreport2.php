@@ -34,9 +34,6 @@
         </div>
         <div class="col-lg-12 ">
             <div class="mb-3">
-                <button type="button" class="btn btn-dark text-white btn-block w-50 mx-auto d-block" id="hubungiButton">Contact Student</button>
-            </div>
-            <div class="mb-3">
                 <button type="button" class="btn btn-danger text-white btn-block w-50 mx-auto d-block" id="tolakButton">Rejected Report</button>
             </div>
             <div class="mb-3">
@@ -59,7 +56,7 @@
             data : data,
             success:function(x){
                 alert("Report Successfully Rejected");
-                location.href = "<?= base_url('Report/reviewreport') ?>";
+                location.href = "<?= base_url('Report/riwayatreportdosen') ?>";
             }
         });
     });
@@ -74,7 +71,7 @@
             data : data,
             success:function(x){
                 alert("Report Successfully Accepted");
-                location.href = "<?= base_url('Report/reviewreport') ?>";
+                location.href = "<?= base_url('Report/riwayatreportdosen') ?>";
             }
         });
     });

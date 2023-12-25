@@ -27,9 +27,8 @@ class Report extends CI_Controller {
 	}
 
 	public function reviewreport(){
-		$this->db->where('status !=', 'Save as Draft');
-		$data['data'] = $this->db->get('trx_report')->result();
-		
+		$data['data'] = $this->db->get_where('trx_report',['status'=>'Submitted'])->result();
+
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/review-report',$data);
@@ -44,11 +43,15 @@ class Report extends CI_Controller {
 	}
 
 	public function riwayatreportdosen(){
+		$statuses = array('Accepted Report', 'Rejected Report');
+		$this->db->where_in('status', $statuses);
+		$data['data'] = $this->db->get('trx_report')->result();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/riwayat-report-dosen');
+		$this->load->view('modul-report/riwayat-report-dosen', $data);
 		$this->load->view('global/foot');
 	}
+	
 
 	public function detailreport2($id){
 		$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();

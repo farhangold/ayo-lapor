@@ -25,33 +25,32 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>Farhan</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td><span class="badge badge-warning text-white">Submited By Mahasiswa</span></td>
-                                    <td><button class="detail-button btn btn-info">Detail</button></td>
-                                </tr>
-                                <tr>
-                                    <th>2</th>
-                                    <td>Tangguh</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td><span class="badge badge-info">Review By Dosen</span></td>
-                                    <td><button class="detail-button btn btn-info">Detail</button></td>
-                                </tr>
-                                <tr>
-                                    <th>3</th>
-                                    <td>Ghaza</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td><span class="badge badge-success">Request Review Kemahasiswaan</span></td>
-                                    <td><button class="detail-button btn btn-info">Detail</button></td>
-                                </tr>
+                            <?php 
+                                $no =0;
+                                    foreach ($data as $key => $value) { 
+                                        $no++;
+                                        $url = base_url("assets/bukti/".$value->bukti_laporan);
+                                        $color = "warning";
+                                        if ($value->status == "Submitted") {
+                                            $color = "success";
+                                        }
+                                        echo "<tr>";
+                                        echo "<td>$no</td>";
+                                        echo "<td>$value->user</td>";
+                                        echo "<td>$value->tanggal</td>";
+                                        echo "<td><img src='$url' width='120px' alt='-'></td>";
+                                        echo "<td>$value->keterangan</td>";
+                                        echo "<td><span class='badge badge-$color text-white'>$value->status</span></td>";
+
+                                        $action = " <a href='".base_url('Report/detailreport2/'.$value->id)."' class='detail-button btn btn-info text-white '>Detail</a> &nbsp;";
+                                        if ($value->status == "Save as Draft" ) {
+                                            $action .= " <a href='".base_url('Report/editreport/'.$value->id)."' class='detail-button btn btn-warning text-white '>Edit</a> &nbsp;
+                                            <a href='".base_url('Report/delete/'.$value->id)."' class='detail-button btn btn-danger text-white '>Delete</a>";
+                                        }
+
+                                        echo "<td>$action</td>";
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>

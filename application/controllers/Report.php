@@ -27,9 +27,12 @@ class Report extends CI_Controller {
 	}
 
 	public function reviewreport(){
+		$this->db->where('status !=', 'Save as Draft');
+		$data['data'] = $this->db->get('trx_report')->result();
+		
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/review-report');
+		$this->load->view('modul-report/review-report',$data);
 		$this->load->view('global/foot');
 	}
 
@@ -47,10 +50,11 @@ class Report extends CI_Controller {
 		$this->load->view('global/foot');
 	}
 
-	public function detailreport2(){
+	public function detailreport2($id){
+		$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/detailreport2');
+		$this->load->view('modul-report/detailreport2',$data);
 		$this->load->view('global/foot');
 	}
 
@@ -160,5 +164,14 @@ class Report extends CI_Controller {
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/riwayat-report-kmhs');
 		$this->load->view('global/foot');
+	}
+
+	public function changeStatus()
+	{
+		$id = $this->input->post('id');
+		$status = $this->input->post('status');
+		$this->db->update('trx_report',['status'=>$status],['id'=>$id]);
+
+		echo 'ok';
 	}
 }

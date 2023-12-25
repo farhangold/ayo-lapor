@@ -16,6 +16,7 @@
                             <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">NO</th>
                             <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Name</th>
                             <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Date</th>
+                            <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">jenis laporan</th>
                             <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Bukti Laporan</th>
                             <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Keterangan</th>
                             <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Status</th>

@@ -77,7 +77,11 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
+<<<<<<< HEAD
 	'password' => '',
+=======
+	'password' => 'Ghaza@2002',
+>>>>>>> 5ef1ef0b867c37b1507c47047c6a4ed0ec668277
 	'database' => 'ayolapor',
 	'port' => '3308',
 	'dbdriver' => 'mysqli',

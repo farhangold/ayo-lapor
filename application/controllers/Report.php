@@ -46,7 +46,7 @@ class Report extends CI_Controller {
 	}
 
 	public function riwayatreportdosen(){
-		$statuses = array('Accepted Report By Dosen Wali', 'Rejected Report By Dosen Wali');
+		$statuses = array('Accepted Report By Dosen Wali', 'Rejected Report By Dosen Wali', 'Accepted Report By Kemahasiswaan', 'Rejected Report By Kemahasiswaan', 'Finish');
 		$this->db->where_in('status', $statuses);
 		$data['data'] = $this->db->get('trx_report')->result();
 		$this->load->view('global/head');

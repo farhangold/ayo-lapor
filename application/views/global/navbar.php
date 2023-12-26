@@ -21,7 +21,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/myreport') ?>">MY REPORT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Berita/Beritapage') ?>">NEWS</a>
+                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Berita/BeritaShowPage') ?>">NEWS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>
@@ -37,7 +37,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/riwayatreportkmhs') ?>">HISTORY REPORT</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Berita/BeritaKmhs') ?>">NEWS</a>
+                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Berita/Beritapage') ?>">NEWS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>
@@ -51,6 +51,9 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/riwayatreportdosen') ?>">HISTORY REPORT</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Berita/BeritaShowPage') ?>">NEWS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>

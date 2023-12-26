@@ -44,4 +44,39 @@ class Settings extends CI_Controller {
 		$this->load->view('modul-settings/faq');
 		$this->load->view('global/foot');
 	}
+
+	public function reportBug()
+	{
+		$data['success_message'] = $this->session->flashdata('success_message');
+
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-settings/bugs');
+		$this->load->view('global/foot');
+	}
+
+	public function submit_bug() {
+        $bug_subject = $this->input->post('bug_subject');
+        $bug_description = $this->input->post('bug_description');
+
+        // Validasi data
+        if ($bug_subject !== null && $bug_description !== null) {
+            // Load model jika diperlukan
+            // Contoh: $this->load->model('bug_model');
+
+            // Simpan data ke database
+            $bugData = array(
+                'subject' => $bug_subject,
+                'description' => $bug_description,
+                // tambahkan kolom lain sesuai kebutuhan
+            );
+
+            $this->db->insert('bug_report', $bugData);
+			$this->session->set_flashdata('message', ' <div class="alert alert-success">Bug berhasil dilaporkan!</div>');
+
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger">Terjadi kesalahan. Silakan coba lagi.</div>');
+        }
+		return redirect(base_url('Settings/setting'));
+    }
 }

@@ -6,7 +6,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-2">
-                            <a href="<?= base_url('Berita/add') ?>" class="btn btn-primary">Tambah</a>
+                            <a href="<?= base_url('Berita/add') ?>" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                     <br>

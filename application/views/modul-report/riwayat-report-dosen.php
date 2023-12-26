@@ -16,9 +16,9 @@
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">NO</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Name</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Date</th>
-                                <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Jenis Laporan</th>
-                                <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Bukti Laporan</th>
-                                <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Keterangan</th>
+                                <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Report Type</th>
+                                <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Report Evidence</th>
+                                <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Description</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center" scope="col">Status</th>
                                 <th style="background-color:#E54B4B;" class="text-white text-center w-25" scope="col">Action</th>
                                 </tr>
@@ -35,6 +35,12 @@
                                             $color = "success";
                                         }elseif ($value->status == "Rejected Report By Dosen Wali"){
                                             $color = "danger";
+                                        }elseif ($value->status == "Rejected Report By Kemahasiswaan"){
+                                            $color = "danger";
+                                        }elseif ($value->status == "Accepted Report By Kemahasiswaan"){
+                                            $color = "success";
+                                        }elseif ($value->status == "Finish"){
+                                            $color = "success";
                                         }
                                         echo "<tr>";
                                         echo "<td>$no</td>";

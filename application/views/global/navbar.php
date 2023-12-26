@@ -48,16 +48,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
                     <li class="nav-item">
                         <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Report/riwayatreportdosen') ?>">HISTORY REPORT</a>
                     </li>
-<<<<<<< HEAD
-                    <li class="nav-item ">
-                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Berita/BeritaShowPage') ?>">NEWS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="margin-left:30px;"href="<?= base_url('Settings/setting') ?>">SETTING</a>
-                    </li>
-=======
                     
->>>>>>> 599cc1b703742f195ecc4c03d0547dd3571c7667
                 <?php } ?>
             </ul>
             <div class="nav-item dropdown">

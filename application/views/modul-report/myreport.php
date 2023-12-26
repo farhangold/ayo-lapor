@@ -54,10 +54,13 @@
                                         echo "<td><span class='badge badge-$color text-white'>$value->status</span></td>";
 
                                         $action = " <a href='".base_url('Report/detailreport/'.$value->id)."' class='detail-button btn btn-info text-white '>Detail</a> &nbsp;";
-                                        if ($value->status == "Save as Draft"|| $value->status == "Rejected Report By Dosen Wali" || $value->status == "Rejected Report By Kemahasiswaan" ) {
+                                        if ($value->status == "Save as Draft" ) {
                                             $action .= " <a href='".base_url('Report/editreport/'.$value->id)."' class='detail-button btn btn-warning text-white '>Edit</a> &nbsp;
                                             <a href='".base_url('Report/delete/'.$value->id)."' class='detail-button btn btn-danger text-white '>Delete</a>";
+                                        }elseif ($value->status == "Rejected Report By Dosen Wali" || $value->status == "Rejected Report By Kemahasiswaan") {
+                                            $action .= "<a href='" . base_url('Report/delete/' . $value->id) . "' class='detail-button btn btn-danger text-white'>Delete</a>";
                                         }
+                                        
 
                                         echo "<td>$action</td>";
                                     }

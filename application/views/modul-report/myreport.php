@@ -33,9 +33,15 @@
                                         $color = "warning";
                                         if ($value->status == "Submitted") {
                                             $color = "info";
-                                        }elseif ($value->status == "Rejected Report"){
+                                        }elseif ($value->status == "Rejected Report By Dosen Wali"){
                                             $color = "danger";
-                                        }elseif ($value->status == "Accepted Report"){
+                                        }elseif ($value->status == "Accepted Report By Dosen Wali"){
+                                            $color = "success";
+                                        }elseif ($value->status == "Rejected Report By Kemahasiswaan"){
+                                            $color = "danger";
+                                        }elseif ($value->status == "Accepted Report By Kemahasiswaan"){
+                                            $color = "success";
+                                        }elseif ($value->status == "Finish"){
                                             $color = "success";
                                         }
                                         echo "<tr>";
@@ -48,7 +54,7 @@
                                         echo "<td><span class='badge badge-$color text-white'>$value->status</span></td>";
 
                                         $action = " <a href='".base_url('Report/detailreport/'.$value->id)."' class='detail-button btn btn-info text-white '>Detail</a> &nbsp;";
-                                        if ($value->status == "Save as Draft" ) {
+                                        if ($value->status == "Save as Draft"|| $value->status == "Rejected Report By Dosen Wali" ) {
                                             $action .= " <a href='".base_url('Report/editreport/'.$value->id)."' class='detail-button btn btn-warning text-white '>Edit</a> &nbsp;
                                             <a href='".base_url('Report/delete/'.$value->id)."' class='detail-button btn btn-danger text-white '>Delete</a>";
                                         }

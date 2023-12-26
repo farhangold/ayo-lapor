@@ -36,14 +36,17 @@ class Report extends CI_Controller {
 	}
 
 	public function reviewreportkemahasiswaan(){
+		$statuses = array('Accepted Report By Dosen Wali','Accepted Report By Kemahasiswaan');
+		$this->db->where_in('status', $statuses);
+		$data['data'] = $this->db->get('trx_report')->result();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/review-report-kmhs');
+		$this->load->view('modul-report/review-report-kmhs',$data);
 		$this->load->view('global/foot');
 	}
 
 	public function riwayatreportdosen(){
-		$statuses = array('Accepted Report', 'Rejected Report');
+		$statuses = array('Accepted Report By Dosen Wali', 'Rejected Report By Dosen Wali');
 		$this->db->where_in('status', $statuses);
 		$data['data'] = $this->db->get('trx_report')->result();
 		$this->load->view('global/head');
@@ -58,6 +61,13 @@ class Report extends CI_Controller {
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/detailreport2',$data);
+		$this->load->view('global/foot');
+	}
+	public function detailreport3($id){
+		$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-report/detailreport3',$data);
 		$this->load->view('global/foot');
 	}
 
@@ -163,9 +173,13 @@ class Report extends CI_Controller {
 	}
 
 	public function riwayatreportkmhs(){
+		
+		$statuses = array('Accepted Report By Kemahasiswaan', 'Rejected Report By Kemahasiswaan','Finish');
+		$this->db->where_in('status', $statuses);
+		$data['data'] = $this->db->get('trx_report')->result();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-report/riwayat-report-kmhs');
+		$this->load->view('modul-report/riwayat-report-kmhs',$data);
 		$this->load->view('global/foot');
 	}
 

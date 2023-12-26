@@ -31,9 +31,9 @@
                                         $no++;
                                         $url = base_url("assets/bukti/".$value->bukti_laporan);
                                         $color = "info";
-                                        if ($value->status == "Accepted Report") {
+                                        if ($value->status == "Accepted Report By Dosen Wali") {
                                             $color = "success";
-                                        }elseif ($value->status == "Rejected Report"){
+                                        }elseif ($value->status == "Rejected Report By Dosen Wali"){
                                             $color = "danger";
                                         }
                                         echo "<tr>";

@@ -55,7 +55,6 @@ class Report extends CI_Controller {
 		$this->load->view('global/foot');
 	}
 	
-
 	public function detailreport2($id){
 		$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
 		$this->load->view('global/head');

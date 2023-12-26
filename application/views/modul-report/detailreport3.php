@@ -47,7 +47,7 @@
 
     var jq = $.noConflict();
     document.getElementById('tolakButton').addEventListener('click', function() {
-        var status = 'Rejected Report By Dosen Wali';
+        var status = 'Rejected Report By Kemahasiswaan';
         var id = $("#id").val();
         var data = {"status":status,"id":id}
         jq.ajax({
@@ -56,13 +56,13 @@
             data : data,
             success:function(x){
                 alert("Report Successfully Rejected");
-                location.href = "<?= base_url('Report/riwayatreportdosen') ?>";
+                location.href = "<?= base_url('Report/riwayatreportkmhs') ?>";
             }
         });
     });
 
     document.getElementById('tindakLanjutButton').addEventListener('click', function() {
-        var status = 'Accepted Report By Dosen Wali';
+        var status = 'Accepted Report By Kemahasiswaan';
         var id = $("#id").val();
         var data = {"status":status,"id":id}
         jq.ajax({
@@ -71,7 +71,7 @@
             data : data,
             success:function(x){
                 alert("Report Successfully Accepted");
-                location.href = "<?= base_url('Report/riwayatreportdosen') ?>";
+                location.href = "<?= base_url('Report/riwayatreportkmhs') ?>";
             }
         });
     });

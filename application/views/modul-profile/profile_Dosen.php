@@ -11,12 +11,12 @@
             <div class="card">
                 <div class="card-body">
                     <h1>Profile Dosen Wali</h1><hr>
-                    <p><strong>Nama Depan:</strong> <?php echo $profile['first_name']; ?></p>
-                    <p><strong>Nama Belakang:</strong> <?php echo $profile['last_name']; ?></p>
-                    <p><strong>Alamat Email:</strong> <?php echo $profile['email']; ?></p>
-                    <p><strong>Kota Asal:</strong> <?php echo $profile['city']; ?></p>
-                    <p><strong>Negara:</strong> <?php echo $profile['country']; ?></p>
-                    <p><strong>Deskripsi Profil:</strong> <?php echo $profile['description']; ?></p>
+                    <p><strong>First Name:</strong> <?php echo $profile['first_name']; ?></p>
+                    <p><strong>Last Name:</strong> <?php echo $profile['last_name']; ?></p>
+                    <p><strong>Email Address:</strong> <?php echo $profile['email']; ?></p>
+                    <p><strong>Hometown:</strong> <?php echo $profile['city']; ?></p>
+                    <p><strong>Country:</strong> <?php echo $profile['country']; ?></p>
+                    <p><strong>Profile Description:</strong> <?php echo $profile['description']; ?></p>
                 </div>
             </div>
         </div>

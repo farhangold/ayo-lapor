@@ -8,6 +8,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
         <div class="col-lg-10">
             <form>
                 <?php if ($data != null) { ?>
+                    <input type="hidden" name="id" id="id" value="<?= $data->id ?>">
                     <div class="mb-3">
                         <label for="NameInput" class="form-label">Name Student</label>
                         <input type="text" id="KeteranganInput" class="form-control" value="<?= $data->user ?> " disabled>
@@ -68,7 +69,9 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
            
                <?php }else if(strtolower($user->role) == "kemahasiswaan"){ ?>
                 <a href="<?=base_url('Report/riwayatreportkmhs')?>" class="btn btn-danger text-white w-25" id="backButton">Back</a>
-    
+                    <?php if( $data->status == "Accepted Report By Kemahasiswaan"){ ?>
+                    <a id="finishButton" class="btn btn-success text-white w-25">Finish</a>
+                    <?php } ?>     
                 <?php }else{ ?>
                 <a href="<?=base_url('Report/riwayatreportdosen')?>" class="btn btn-danger text-white w-25" id="backButton">Back</a>
 
@@ -81,3 +84,21 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var jq = $.noConflict();
+        document.getElementById('finishButton').addEventListener('click', function() {
+        var status = 'Finish';
+        var id = $("#id").val();
+        var data = {"status":status,"id":id}
+        jq.ajax({
+            url:"<?= base_url('Report/changeStatus') ?>",
+            method:"POST",
+            data : data,
+            success:function(x){
+                alert("Report Finish");
+                location.href = "<?= base_url('Report/riwayatreportkmhs') ?>";
+            }
+        });
+    });
+    </script>

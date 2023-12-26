@@ -1,34 +1,22 @@
 <div class="mycontainer" style="margin-top: 1rem;">
     <div class="row">
         <div class="col-md-3">
-<<<<<<< HEAD
-            <div class="card">
-                <div class="card-body text-center">
-                    <!-- Tambahkan gambar profil di sini -->
-                    <img src="<?= base_url('assets') ?>/images/user.png" alt="Profile Image" class="img-fluid">
-                    <p><strong></strong> <?= $profile['first_name']." ".$profile['last_name'] ?></p>
-                    <p><strong></strong> <?= $profile['nim'] ?></p>
-                    <p><strong></strong> <?= $profile['role'] ?></p>
-                </div>
-            </div>
-=======
             <!-- Tambahkan gambar profil di sini -->
             <img src="<?= base_url('assets') ?>/images/user.png" alt="Profile Image" class="img-fluid">
             <p><strong></strong> <?= $profile['first_name']." ".$profile['last_name'] ?></p>
             <p><strong></strong> <?= $profile['nim'] ?></p>
             <p><strong></strong> <?= $profile['role'] ?></p>
->>>>>>> 305a7ec53acaace38646e039d65fd94ac4804a20
         </div>
         <div class="col-md-9">
             <div class="card">
                 <div class="card-body">
                     <h1>Profile Mahasiswa</h1><hr>
-                    <p><strong>Nama Depan:</strong> <?php echo $profile['first_name']; ?></p>
-                    <p><strong>Nama Belakang:</strong> <?php echo $profile['last_name']; ?></p>
-                    <p><strong>Alamat Email:</strong> <?php echo $profile['email']; ?></p>
-                    <p><strong>Kota Asal:</strong> <?php echo $profile['city']; ?></p>
-                    <p><strong>Negara:</strong> <?php echo $profile['country']; ?></p>
-                    <p><strong>Deskripsi Profil:</strong> <?php echo $profile['description']; ?></p>
+                    <p><strong>First Name:</strong> <?php echo $profile['first_name']; ?></p>
+                    <p><strong>Last Name:</strong> <?php echo $profile['last_name']; ?></p>
+                    <p><strong>Email Address:</strong> <?php echo $profile['email']; ?></p>
+                    <p><strong>Hometown:</strong> <?php echo $profile['city']; ?></p>
+                    <p><strong>Country:</strong> <?php echo $profile['country']; ?></p>
+                    <p><strong>Profile Description:</strong> <?php echo $profile['description']; ?></p>
                 </div>
             </div>
         </div>

@@ -1,6 +1,9 @@
 <footer id="footer" class="text-white" style="background-color:black;padding:50px;">
       <div  class="text-center">
-        <h2>CONTACT US</h2>
+      <li class="list-group-item" style="background-color: black"><a href="https://api.whatsapp.com/send?phone=089658664909"><h2>Contact Us</h2>
+    </a></li>
+
+
         <p >Contact us for assistance and support through 'AyoLapor' and 
           <br>let's work together to address any concerns you may have</p>
       </div>

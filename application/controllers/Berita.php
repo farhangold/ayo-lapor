@@ -20,17 +20,75 @@ class Berita extends CI_Controller {
 	 */
 	public function Beritapage()
 	{
+		$data['data'] = $this->db->get('news')->result();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-berita/berita');
+		$this->load->view('modul-berita/berita',$data);
 		$this->load->view('global/foot');
 	}
-
-	public function BeritaKmhs()
+	public function BeritaShowPage()
 	{
+		$data['data'] = $this->db->get('news')->result();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
-		$this->load->view('modul-berita/berita-kmhs');
+		$this->load->view('modul-berita/beritashow',$data);
 		$this->load->view('global/foot');
+	}
+	public function add()
+	{
+		$this->form_validation->set_rules('title',"title",'required');
+		if ($this->form_validation->run()) {
+			$data = [
+				'title' => $this->input->post('title'),
+				'description' => $this->input->post('description'),
+				'created_at'=>date('Y-m-d H:i:s'),
+				'created_by' => $this->session->userdata('username')
+			];
+			$this->db->insert("news",$data);
+			return redirect(base_url('Berita/Beritapage'));
+		}
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-berita/add');
+		$this->load->view('global/foot');
+	}
+	public function edit($id)
+	{
+		$this->form_validation->set_rules('title',"title",'required');
+		if ($this->form_validation->run()) {
+			$data = [
+				'title' => $this->input->post('title'),
+				'description' => $this->input->post('description')
+			];
+			$this->db->update("news",$data,['id'=>$id]);
+			return redirect(base_url('Berita/Beritapage'));
+		}
+		$data['data'] = $this->db->get_where('news',['id'=>$id])->row();
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-berita/edit',$data);
+		$this->load->view('global/foot');
+	}
+	public function detail($id)
+	{
+		$data['data'] = $this->db->get_where('news',['id'=>$id])->row();
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-berita/detail',$data);
+		$this->load->view('global/foot');
+	}
+	public function show($id)
+	{
+		$data['data'] = $this->db->get_where('news',['id'=>$id])->row();
+		$this->load->view('global/head');
+		$this->load->view('global/navbar');
+		$this->load->view('modul-berita/show',$data);
+		$this->load->view('global/foot');
+	}
+	public function delete($id)
+	{
+		$this->db->where('id',$id);
+		$this->db->delete('news');
+		return redirect(base_url('Berita/Beritapage'));
 	}
 }

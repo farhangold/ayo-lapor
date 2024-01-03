@@ -8,15 +8,19 @@ class Profile extends CI_Controller {
 		if($this->session->userdata('username') == null){
 			redirect(base_url('login/LoginPage'));
 		}
+        $this->load->model('UsersModel','model');
+        $this->load->model('MahasiswaModel','mhs_model');
+        $this->load->model('DosenWaliModel','ds_model');
+        $this->load->model('KemahasiswaanModel','kmhs_model');
 	}
 
     public function Profilepage()
     {
 
-        $user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
+        $user = $this->model->getByParam(['username'=>$this->session->userdata('username')])->row();
         $mytable = "mahasiswa";
         // Data profil
-        $data['profile'] = $this->db->get_where($mytable,['id'=>$user->parent_id])->row_array();
+        $data['profile'] = $this->mhs_model->getByParam(['id'=>$user->parent_id])->row_array();
         $data['profile']['role'] = $user->role;
         $this->load->view('global/head');
         $this->load->view('global/navbar');
@@ -25,10 +29,10 @@ class Profile extends CI_Controller {
     }
     public function ProfilepageDosen()
     {
-        $user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
+        $user = $this->model->getByParam(['username'=>$this->session->userdata('username')])->row();
         $mytable = "dosen_wali";
         // Data profil
-        $data['profile'] = $this->db->get_where($mytable,['id'=>$user->parent_id])->row_array();
+        $data['profile'] = $this->ds_model->getByParam(['id'=>$user->parent_id])->row_array();
         $data['profile']['role'] = $user->role; 
         $this->load->view('global/head');
         $this->load->view('global/navbar');
@@ -37,10 +41,10 @@ class Profile extends CI_Controller {
     }
     public function ProfilepageKmh()
     {
-        $user = $this->db->get_where('users',['username'=>$this->session->userdata('username')])->row();
+        $user = $this->model->getByParam(['username'=>$this->session->userdata('username')])->row();
         $mytable = "kmhs";
         // Data profil
-        $data['profile'] = $this->db->get_where($mytable,['id'=>$user->parent_id])->row_array();
+        $data['profile'] = $this->kmhs_model->getByParam(['id'=>$user->parent_id])->row_array();
         $data['profile']['role'] = $user->role; 
         $this->load->view('global/head');
         $this->load->view('global/navbar');

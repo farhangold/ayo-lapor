@@ -18,6 +18,12 @@ class Berita extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+
+	 public function __construct()
+	 {
+		 parent::__construct();
+		 $this->load->model('BeritaModel','model');
+	 }
 	public function Beritapage()
 	{
 		$data['data'] = $this->db->get('news')->result();
@@ -44,7 +50,7 @@ class Berita extends CI_Controller {
 				'created_at'=>date('Y-m-d H:i:s'),
 				'created_by' => $this->session->userdata('username')
 			];
-			$this->db->insert("news",$data);
+			$this->model->insert($data);
 			return redirect(base_url('Berita/Beritapage'));
 		}
 		$this->load->view('global/head');
@@ -60,10 +66,10 @@ class Berita extends CI_Controller {
 				'title' => $this->input->post('title'),
 				'description' => $this->input->post('description')
 			];
-			$this->db->update("news",$data,['id'=>$id]);
+			$this->model->update($data,$id);
 			return redirect(base_url('Berita/Beritapage'));
 		}
-		$data['data'] = $this->db->get_where('news',['id'=>$id])->row();
+		$data['data'] = $this->model->getById($id);
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-berita/edit',$data);
@@ -71,7 +77,7 @@ class Berita extends CI_Controller {
 	}
 	public function detail($id)
 	{
-		$data['data'] = $this->db->get_where('news',['id'=>$id])->row();
+		$data['data'] = $this->model->getById($id);
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-berita/detail',$data);
@@ -79,7 +85,7 @@ class Berita extends CI_Controller {
 	}
 	public function show($id)
 	{
-		$data['data'] = $this->db->get_where('news',['id'=>$id])->row();
+		$data['data'] = $this->model->getById($id);
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-berita/show',$data);
@@ -87,8 +93,7 @@ class Berita extends CI_Controller {
 	}
 	public function delete($id)
 	{
-		$this->db->where('id',$id);
-		$this->db->delete('news');
+		$this->model->delete($id);
 		return redirect(base_url('Berita/Beritapage'));
 	}
 }

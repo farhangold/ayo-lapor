@@ -15,7 +15,6 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('global/head');
 		$this->load->view('modul-login/login');
-		$this->load->view('global/foot');
 	}
 
 	function regisUser() {

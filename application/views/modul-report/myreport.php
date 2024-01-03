@@ -1,10 +1,10 @@
 
-    <div class="mycontainer">
+    <div class="mycontainer">  
         <div class="card">
             <div class="card-body">    
-            <h2 class="text-center text-DARK">MY REPORT</h2>
                 <div class="row">
                     <div class="col-md-12">
+                    <h2 class="text-center text-dark">MY REPORT</h2>
                         <div class="row">
                             <div class="col-md-2">
                                 <a href="<?= base_url('Report/reportmhs') ?>" class="btn btn-primary">Add</a>

@@ -53,7 +53,7 @@ $user = $this->db->get_where('users',['username'=>$this->session->userdata('user
             </ul>
             <div class="nav-item dropdown">
                                 <a class="nav-link my-3 me-5" href="<?= base_url('Settings/setting') ?>"  aria-expanded="false">
-                                    <img src="<?= base_url('assets') ?>/images/profile.png" style="max-height:24px;" class="rounded-circle" alt="user" />
+                                    <img src="<?= base_url('assets') ?>/images/Profile.png" style="max-height:24px;" class="rounded-circle" alt="user" />
                                 </a>
                                 
             </div>

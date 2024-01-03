@@ -1,25 +1,23 @@
 <style>
     .custom-card {
-        height: 200px; /* Sesuaikan dengan tinggi yang diinginkan */
+        height: 200px; 
     }
 
     .border-edge {
-        border-radius: 100; /* Atur nilai sesuai dengan tingkat ketajaman yang diinginkan, misalnya 0 untuk tajam, 5px untuk edge setengah bulat, dst. */
+        border-radius: 100; 
     }
 </style>
 
 <div class="mycontainer">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card border-0 border-edge"> <!-- Tambahkan kelas border-edge di sini -->
-                <div class="card-body text-center">
-                    <h2 class="text-DARK">NEWS</h2>
-                </div>
-            </div>
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text-center text-dark">NEWS</h2>
         </div>
+    </div>
+    <div class="row justify-content-center">
         <?php foreach ($data as $key => $value) { ?>
             <div class="col-md-4" style="margin-top: 20px">
-                <div class="card mx-auto custom-card border-20 border-edge"> <!-- Tambahkan kelas border-edge di sini -->
+                <div class="card mx-auto custom-card border-20 border-edge">
                     <div class="card-body text-center">
                         <h3 class="news-title"><?= $value->title ?></h3>
                         <div class="row" style="margin-top: 30px;">
@@ -48,5 +46,3 @@
             });
         });
     </script>
-    
-

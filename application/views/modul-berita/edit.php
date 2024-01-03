@@ -16,7 +16,7 @@
         </div>
         <div class="col-lg-10 mt-3">
             <div class="mb-3">
-                <button type="submit" class="btn btn-warning text-white w-25">Edit</button>
+                <button type="submit" class="btn btn-info text-white w-25">Save</button>
             </div>
         </div>
         </form>

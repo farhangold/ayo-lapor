@@ -73,7 +73,7 @@ class Settings extends CI_Controller {
                 // tambahkan kolom lain sesuai kebutuhan
             );
 
-            $this->db->insert('bug_report', $bugData);
+            $this->model->insert($bugData);
 			$this->session->set_flashdata('message', ' <div class="alert alert-success">Bug berhasil dilaporkan!</div>');
 
         } else {

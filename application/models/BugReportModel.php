@@ -41,6 +41,7 @@ class BugReportModel extends CI_Model {
             return null;
         }
     }
+
     public function getAll()
     {        
         $data = $this->db->get('bug_report')->result();

@@ -31,7 +31,7 @@ class Profile extends CI_Controller {
     {
         $user = $this->model->getByParam(['username'=>$this->session->userdata('username')])->row();
         $mytable = "dosen_wali";
-        // Data profil
+        // Data profil`
         $data['profile'] = $this->ds_model->getByParam(['id'=>$user->parent_id])->row_array();
         $data['profile']['role'] = $user->role; 
         $this->load->view('global/head');

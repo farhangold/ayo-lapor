@@ -23,6 +23,8 @@ class Settings extends CI_Controller {
 		if($this->session->userdata('username') == null){
 			redirect(base_url('login/LoginPage'));
 		}
+		$this->load->model('BugReportModel','model');
+
 	}
 	public function setting()
 	{

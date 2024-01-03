@@ -24,11 +24,12 @@ class Report extends CI_Controller {
 		if($this->session->userdata('username') == null){
 			redirect(base_url('login/LoginPage'));
 		}
+		$this->load->model('ReportModel','model');
+		
 	}
 
 	public function reviewreport(){
-		$data['data'] = $this->db->get_where('trx_report',['status'=>'Submitted'])->result();
-
+		$data['data'] = $this->model->getByParam(['status'=>'Submitted'])->result();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/review-report',$data);
@@ -37,8 +38,7 @@ class Report extends CI_Controller {
 
 	public function reviewreportkemahasiswaan(){
 		$statuses = array('Accepted Report By Dosen Wali','Accepted Report By Kemahasiswaan');
-		$this->db->where_in('status', $statuses);
-		$data['data'] = $this->db->get('trx_report')->result();
+		$data['data'] = $this->model->getByStatusIn($statuses);
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/review-report-kmhs',$data);
@@ -47,8 +47,7 @@ class Report extends CI_Controller {
 
 	public function riwayatreportdosen(){
 		$statuses = array('Accepted Report By Dosen Wali', 'Rejected Report By Dosen Wali', 'Accepted Report By Kemahasiswaan', 'Rejected Report By Kemahasiswaan', 'Finish');
-		$this->db->where_in('status', $statuses);
-		$data['data'] = $this->db->get('trx_report')->result();
+		$data['data'] = $this->model->getByStatusIn($statuses);
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/riwayat-report-dosen', $data);
@@ -56,14 +55,14 @@ class Report extends CI_Controller {
 	}
 	
 	public function detailreport2($id){
-		$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
+		$data['data'] = $this->model->getByParam(['id'=>$id])->row();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/detailreport2',$data);
 		$this->load->view('global/foot');
 	}
 	public function detailreport3($id){
-		$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
+		$data['data'] = $this->model->getByParam(['id'=>$id])->row();
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/detailreport3',$data);
@@ -72,7 +71,7 @@ class Report extends CI_Controller {
 
 	public function detailreport($id = ""){
 		if ($id!="") {
-			$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
+			$data['data'] = $this->model->getByParam(['id'=>$id])->row();
 		}else{
 			$data['data'] = null;
 		}
@@ -84,7 +83,7 @@ class Report extends CI_Controller {
 	}
 
 	public function editreport($id){
-		$data['data'] = $this->db->get_where('trx_report',['id'=>$id])->row();
+		$data['data'] = $this->model->getByParam(['id'=>$id])->row();
 		
 		$this->form_validation->set_rules('jenis_laporan',"Jenis Laporan",'required');
 		$this->form_validation->set_rules('keterangan',"Keterangan",'required');
@@ -112,7 +111,7 @@ class Report extends CI_Controller {
 				}
 			}
 			
-			$this->db->update("trx_report",$dataUpdate,['id'=>$id]);
+			$this->model->update($dataUpdate,$id);
 			return redirect(base_url('Report/myreport'));
 		}
 		$this->load->view('global/head');
@@ -143,7 +142,7 @@ class Report extends CI_Controller {
 				$file_name = $upload_data['file_name'];
 				$data['bukti_laporan'] = $file_name;
 			}
-			$this->db->insert("trx_report",$data);
+			$this->model->insert($data);
 			return redirect(base_url('Report/myreport'));
 		}
 		$this->load->view('global/head');
@@ -153,18 +152,18 @@ class Report extends CI_Controller {
 	}
 
 	function delete($id){
-		$data = $this->db->get_where('trx_report',['id'=>$id])->row();
+		$data = $this->model->getByParam(['id'=>$id])->row();
 		$file_path = FCPATH . 'assets/bukti/' . $data->bukti_laporan;
 		if (file_exists($file_path)) {
 			unlink($file_path);
 		}
-		$this->db->where('id',$id);
-		$this->db->delete('trx_report');
+		$this->model->delete($id);
 		return redirect(base_url('Report/myreport'));
 	}
 
 	public function myreport(){
-		$data['data'] = $this->db->get_where('trx_report',['user'=>$this->session->userdata('username')])->result();
+		$statuses = array('Accepted Report By Kemahasiswaan', 'Rejected Report By Kemahasiswaan','Accepted Report By Dosen Wali','Rejected Report By Dosen Wali','Finish','Submitted','Save as Draft');
+		$data['data'] = $this->model->getByStatusIn($statuses,1);
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/myreport',$data);
@@ -174,8 +173,7 @@ class Report extends CI_Controller {
 	public function riwayatreportkmhs(){
 		
 		$statuses = array('Accepted Report By Kemahasiswaan', 'Rejected Report By Kemahasiswaan','Finish');
-		$this->db->where_in('status', $statuses);
-		$data['data'] = $this->db->get('trx_report')->result();
+		$data['data'] = $this->model->getByStatusIn($statuses);
 		$this->load->view('global/head');
 		$this->load->view('global/navbar');
 		$this->load->view('modul-report/riwayat-report-kmhs',$data);
@@ -186,7 +184,7 @@ class Report extends CI_Controller {
 	{
 		$id = $this->input->post('id');
 		$status = $this->input->post('status');
-		$this->db->update('trx_report',['status'=>$status],['id'=>$id]);
+		$this->model->update(['status'=>$status],$id);
 
 		echo 'ok';
 	}

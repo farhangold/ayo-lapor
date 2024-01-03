@@ -41,6 +41,28 @@ class ReportModel extends CI_Model {
             return null;
         }
     }
+    public function getByParam($where)
+    {
+        if ($where != null) {         
+            $data = $this->db->get_where('trx_report',$where);
+            return $data;
+        }else{
+            return null;
+        }
+    }
+    public function getByStatusIn($status,$getbyuserlogin=0)
+    {
+        if ($status != null) {         
+	    	$this->db->where_in('status', $status);
+            if ($getbyuserlogin) {
+                $this->db->where('user',$this->session->userdata('username'));
+            }
+            $data = $this->db->get('trx_report')->result();
+            return $data;
+        }else{
+            return null;
+        }
+    }
     public function getAll()
     {        
         $data = $this->db->get('trx_report')->result();

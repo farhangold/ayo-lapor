@@ -10,6 +10,7 @@ class Login extends CI_Controller {
 			$myurl = base_url('Dashboard/DasboardPage'); 
 			redirect($myurl);
 		}
+		$this->load->model('UsersModel','model');
 	}
 	public function LoginPage()
 	{
@@ -24,14 +25,14 @@ class Login extends CI_Controller {
 			'password' => password_hash("password",PASSWORD_DEFAULT),
 			'role'=> "Kemahasiswaan"
 		];
-		$this->db->insert('users',$data);
+		$this->model->insert($data);
 	}
 	public function check_login() {
 		$where = [
 			'username' => $this->input->post('username'),
 			'role'=> $this->input->post('role')
 		];
-        $query = $this->db->get_where('users',$where);
+        $query = $this->model->getByParam($where);
         
         if ($query->num_rows() > 0) {
 			$data = $query->row();

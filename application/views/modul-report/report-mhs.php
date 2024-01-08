@@ -14,8 +14,8 @@
                                 <label for="jenis_laporan">Type Report</label>
                                 <select class="form-control" id="jenis_laporan" name="jenis_laporan">
                                     <option>--- Type Report ---</option>
-                                    <option value="Pelecehan">Fractions</option>
-                                    <option value="Kekerasan">Violence</option>
+                                    <option value="Fractions">Fractions</option>
+                                    <option value="Violence">Violence</option>
                                 </select>
                                 <?= form_error('jenis_laporan', '<span class="text-danger">', '</span>') ?>
                                 </div>
